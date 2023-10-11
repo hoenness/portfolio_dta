@@ -1,0 +1,3399 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>PROJET1 : ANALYSE DES DONNÉES DES UNIVERSITÉS AMÉRICAINES &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'PROJET 1 ';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">My sample book</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Bienvenue dans mon portfolio de Data Science !
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="PROJET%202.html">PROJET ANALYSE DES VENTES</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PROJET%203.html">PROJET NETFLIX</a></li>
+
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FPROJET 1 .html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/PROJET 1 .ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>PROJET1 :   ANALYSE DES DONNÉES DES UNIVERSITÉS AMÉRICAINES</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="projet1-analyse-des-donnees-des-universites-americaines">
+<h1>PROJET1 :   ANALYSE DES DONNÉES DES UNIVERSITÉS AMÉRICAINES<a class="headerlink" href="#projet1-analyse-des-donnees-des-universites-americaines" title="Permalink to this heading">#</a></h1>
+<p>Problématique
+Quels sont les critères pertinents qui poussent un étudiant a préférer une université par rapport a une autre ?</p>
+<p>A quel type d’etudiants, les universités doivent faire une offre d’admission afin de garder leur qualité en terme de bon etudiants et de reputation, et qui sont susceptible d’accepter l’offre</p>
+<p>Quels sont les critères pertinent qui poussent un étudiant a préférer une université par rapport a une autre</p>
+<p>quels sont les caractéristiques pertinent qui poussent les étudiant a choisir leur université</p>
+<p>Question1: quelles sont les 20 universités qui ont reçu le plus grand nombre de candidatures</p>
+<p>Question2: y’a-t-il une corrélation entre le nombre de candidature, et le nombre d’admissions et le nombre dínscription?</p>
+<p>Question3: classement des universités selon le nombre de candidatures d’admission et d’inscrits</p>
+<p>question4: Est-ce que les universités avce un nombre élevé d’admissions sont -elle les plus préférées pour les étudiants</p>
+<p>Question5: Les étudiants péfèrent-ils les universités publiques ou privées?</p>
+<p>Question6: Y’a-t-il une relation entre le taux d’inscription et le type des universités(publique ou privée)</p>
+<p>Import des packages</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">missingno</span> <span class="k">as</span> <span class="nn">msno</span>
+<span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s2">&quot;data_universite.xlsx&quot;</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.max_columns&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 1534 entries, 0 to 1533
+Columns: 145 entries, ID number to Endowment assets (year end) per FTE enrollment (FASB)
+dtypes: float64(116), int64(2), object(27)
+memory usage: 1.7+ MB
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ID number</th>
+      <th>Name</th>
+      <th>year</th>
+      <th>ZIP code</th>
+      <th>Highest degree offered</th>
+      <th>County name</th>
+      <th>Longitude location of institution</th>
+      <th>Latitude location of institution</th>
+      <th>Religious affiliation</th>
+      <th>Offers Less than one year certificate</th>
+      <th>Offers One but less than two years certificate</th>
+      <th>Offers Associate's degree</th>
+      <th>Offers Two but less than 4 years certificate</th>
+      <th>Offers Bachelor's degree</th>
+      <th>Offers Postbaccalaureate certificate</th>
+      <th>Offers Master's degree</th>
+      <th>Offers Post-master's certificate</th>
+      <th>Offers Doctor's degree - research/scholarship</th>
+      <th>Offers Doctor's degree - professional practice</th>
+      <th>Offers Doctor's degree - other</th>
+      <th>Offers Other degree</th>
+      <th>Applicants total</th>
+      <th>Admissions total</th>
+      <th>Enrolled total</th>
+      <th>Percent of freshmen submitting SAT scores</th>
+      <th>Percent of freshmen submitting ACT scores</th>
+      <th>SAT Critical Reading 25th percentile score</th>
+      <th>SAT Critical Reading 75th percentile score</th>
+      <th>SAT Math 25th percentile score</th>
+      <th>SAT Math 75th percentile score</th>
+      <th>SAT Writing 25th percentile score</th>
+      <th>SAT Writing 75th percentile score</th>
+      <th>ACT Composite 25th percentile score</th>
+      <th>ACT Composite 75th percentile score</th>
+      <th>Estimated enrollment, total</th>
+      <th>Estimated enrollment, full time</th>
+      <th>Estimated enrollment, part time</th>
+      <th>Estimated undergraduate enrollment, total</th>
+      <th>Estimated undergraduate enrollment, full time</th>
+      <th>Estimated undergraduate enrollment, part time</th>
+      <th>Estimated freshman undergraduate enrollment, total</th>
+      <th>Estimated freshman enrollment, full time</th>
+      <th>Estimated freshman enrollment, part time</th>
+      <th>Estimated graduate enrollment, total</th>
+      <th>Estimated graduate enrollment, full time</th>
+      <th>Estimated graduate enrollment, part time</th>
+      <th>Associate's degrees awarded</th>
+      <th>Bachelor's degrees awarded</th>
+      <th>Master's degrees awarded</th>
+      <th>Doctor's degrese - research/scholarship awarded</th>
+      <th>Doctor's degrees - professional practice awarded</th>
+      <th>Doctor's degrees - other awarded</th>
+      <th>Certificates of less than 1-year awarded</th>
+      <th>Certificates of 1 but less than 2-years awarded</th>
+      <th>Certificates of 2 but less than 4-years awarded</th>
+      <th>Postbaccalaureate certificates awarded</th>
+      <th>Post-master's certificates awarded</th>
+      <th>Number of students receiving an Associate's degree</th>
+      <th>Number of students receiving a Bachelor's degree</th>
+      <th>Number of students receiving a Master's degree</th>
+      <th>Number of students receiving a Doctor's degree</th>
+      <th>Number of students receiving a certificate of less than 1-year</th>
+      <th>Number of students receiving a certificate of 1 but less than 4-years</th>
+      <th>Number of students receiving a Postbaccalaureate or Post-master's certificate</th>
+      <th>Percent admitted - total</th>
+      <th>Admissions yield - total</th>
+      <th>Tuition and fees, 2010-11</th>
+      <th>Tuition and fees, 2011-12</th>
+      <th>Tuition and fees, 2012-13</th>
+      <th>Tuition and fees, 2013-14</th>
+      <th>Total price for in-state students living on campus 2013-14</th>
+      <th>Total price for out-of-state students living on campus 2013-14</th>
+      <th>State abbreviation</th>
+      <th>FIPS state code</th>
+      <th>Geographic region</th>
+      <th>Sector of institution</th>
+      <th>Level of institution</th>
+      <th>Control of institution</th>
+      <th>Historically Black College or University</th>
+      <th>Tribal college</th>
+      <th>Degree of urbanization (Urban-centric locale)</th>
+      <th>Carnegie Classification 2010: Basic</th>
+      <th>Total  enrollment</th>
+      <th>Full-time enrollment</th>
+      <th>Part-time enrollment</th>
+      <th>Undergraduate enrollment</th>
+      <th>Graduate enrollment</th>
+      <th>Full-time undergraduate enrollment</th>
+      <th>Part-time undergraduate enrollment</th>
+      <th>Percent of total enrollment that are American Indian or Alaska Native</th>
+      <th>Percent of total enrollment that are Asian</th>
+      <th>Percent of total enrollment that are Black or African American</th>
+      <th>Percent of total enrollment that are Hispanic/Latino</th>
+      <th>Percent of total enrollment that are Native Hawaiian or Other Pacific Islander</th>
+      <th>Percent of total enrollment that are White</th>
+      <th>Percent of total enrollment that are two or more races</th>
+      <th>Percent of total enrollment that are Race/ethnicity unknown</th>
+      <th>Percent of total enrollment that are Nonresident Alien</th>
+      <th>Percent of total enrollment that are Asian/Native Hawaiian/Pacific Islander</th>
+      <th>Percent of total enrollment that are women</th>
+      <th>Percent of undergraduate enrollment that are American Indian or Alaska Native</th>
+      <th>Percent of undergraduate enrollment that are Asian</th>
+      <th>Percent of undergraduate enrollment that are Black or African American</th>
+      <th>Percent of undergraduate enrollment that are Hispanic/Latino</th>
+      <th>Percent of undergraduate enrollment that are Native Hawaiian or Other Pacific Islander</th>
+      <th>Percent of undergraduate enrollment that are White</th>
+      <th>Percent of undergraduate enrollment that are two or more races</th>
+      <th>Percent of undergraduate enrollment that are Race/ethnicity unknown</th>
+      <th>Percent of undergraduate enrollment that are Nonresident Alien</th>
+      <th>Percent of undergraduate enrollment that are Asian/Native Hawaiian/Pacific Islander</th>
+      <th>Percent of undergraduate enrollment that are women</th>
+      <th>Percent of graduate enrollment that are American Indian or Alaska Native</th>
+      <th>Percent of graduate enrollment that are Asian</th>
+      <th>Percent of graduate enrollment that are Black or African American</th>
+      <th>Percent of graduate enrollment that are Hispanic/Latino</th>
+      <th>Percent of graduate enrollment that are Native Hawaiian or Other Pacific Islander</th>
+      <th>Percent of graduate enrollment that are White</th>
+      <th>Percent of graduate enrollment that are two or more races</th>
+      <th>Percent of graduate enrollment that are Race/ethnicity unknown</th>
+      <th>Percent of graduate enrollment that are Nonresident Alien</th>
+      <th>Percent of graduate enrollment that are Asian/Native Hawaiian/Pacific Islander</th>
+      <th>Percent of graduate enrollment that are women</th>
+      <th>Number of first-time undergraduates - in-state</th>
+      <th>Percent of first-time undergraduates - in-state</th>
+      <th>Number of first-time undergraduates - out-of-state</th>
+      <th>Percent of first-time undergraduates - out-of-state</th>
+      <th>Number of first-time undergraduates - foreign countries</th>
+      <th>Percent of first-time undergraduates - foreign countries</th>
+      <th>Number of first-time undergraduates - residence unknown</th>
+      <th>Percent of first-time undergraduates - residence unknown</th>
+      <th>Graduation rate - Bachelor degree within 4 years, total</th>
+      <th>Graduation rate - Bachelor degree within 5 years, total</th>
+      <th>Graduation rate - Bachelor degree within 6 years, total</th>
+      <th>Percent of freshmen receiving any financial aid</th>
+      <th>Percent of freshmen receiving federal, state, local or institutional grant aid</th>
+      <th>Percent of freshmen  receiving federal grant aid</th>
+      <th>Percent of freshmen receiving Pell grants</th>
+      <th>Percent of freshmen receiving other federal grant aid</th>
+      <th>Percent of freshmen receiving state/local grant aid</th>
+      <th>Percent of freshmen receiving institutional grant aid</th>
+      <th>Percent of freshmen receiving student loan aid</th>
+      <th>Percent of freshmen receiving federal student loans</th>
+      <th>Percent of freshmen receiving other loan aid</th>
+      <th>Endowment assets (year end) per FTE enrollment (GASB)</th>
+      <th>Endowment assets (year end) per FTE enrollment (FASB)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>100654</td>
+      <td>Alabama A &amp; M University</td>
+      <td>2013</td>
+      <td>35762</td>
+      <td>Doctor's degree - research/scholarship</td>
+      <td>Madison County</td>
+      <td>-86.568502</td>
+      <td>34.783368</td>
+      <td>Not applicable</td>
+      <td>Implied no</td>
+      <td>Implied no</td>
+      <td>Implied no</td>
+      <td>Implied no</td>
+      <td>Yes</td>
+      <td>Implied no</td>
+      <td>Yes</td>
+      <td>Implied no</td>
+      <td>Yes</td>
+      <td>Implied no</td>
+      <td>Implied no</td>
+      <td>Implied no</td>
+      <td>6142.0</td>
+      <td>5521.0</td>
+      <td>1104.0</td>
+      <td>15.0</td>
+      <td>88.0</td>
+      <td>370.0</td>
+      <td>450.0</td>
+      <td>350.0</td>
+      <td>450.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>15.0</td>
+      <td>19.0</td>
+      <td>5024.0</td>
+      <td>4442.0</td>
+      <td>582.0</td>
+      <td>4055.0</td>
+      <td>3802.0</td>
+      <td>253.0</td>
+      <td>1104.0</td>
+      <td>1089.0</td>
+      <td>15.0</td>
+      <td>969.0</td>
+      <td>640.0</td>
+      <td>329.0</td>
+      <td>0.0</td>
+      <td>604.0</td>
+      <td>213.0</td>
+      <td>8.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>9.0</td>
+      <td>0.0</td>
+      <td>604.0</td>
+      <td>213.0</td>
+      <td>8.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>9.0</td>
+      <td>90.0</td>
+      <td>20.0</td>
+      <td>5800.0</td>
+      <td>6828.0</td>
+      <td>7182.0</td>
+      <td>7182.0</td>
+      <td>21849.0</td>
+      <td>27441.0</td>
+      <td>Alabama</td>
+      <td>Alabama</td>
+      <td>Southeast AL AR FL GA KY LA MS NC SC TN VA WV</td>
+      <td>Public, 4-year or above</td>
+      <td>Four or more years</td>
+      <td>Public</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>City: Midsize</td>
+      <td>Master's Colleges and Universities (larger pro...</td>
+      <td>5020.0</td>
+      <td>4439.0</td>
+      <td>581.0</td>
+      <td>4051.0</td>
+      <td>969.0</td>
+      <td>3799.0</td>
+      <td>252.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>92.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>5.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>55.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>95.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>3.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>51.0</td>
+      <td>0.0</td>
+      <td>2.0</td>
+      <td>81.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>15.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>2.0</td>
+      <td>69.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>10.0</td>
+      <td>23.0</td>
+      <td>29.0</td>
+      <td>97.0</td>
+      <td>89.0</td>
+      <td>81.0</td>
+      <td>81.0</td>
+      <td>7.0</td>
+      <td>1.0</td>
+      <td>32.0</td>
+      <td>89.0</td>
+      <td>89.0</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>100663</td>
+      <td>University of Alabama at Birmingham</td>
+      <td>2013</td>
+      <td>35294-0110</td>
+      <td>Doctor's degree - research/scholarship and pro...</td>
+      <td>Jefferson County</td>
+      <td>-86.809170</td>
+      <td>33.502230</td>
+      <td>Not applicable</td>
+      <td>Implied no</td>
+      <td>Yes</td>
+      <td>Implied no</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Implied no</td>
+      <td>5689.0</td>
+      <td>4934.0</td>
+      <td>1773.0</td>
+      <td>6.0</td>
+      <td>93.0</td>
+      <td>520.0</td>
+      <td>640.0</td>
+      <td>520.0</td>
+      <td>650.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>22.0</td>
+      <td>28.0</td>
+      <td>18568.0</td>
+      <td>11961.0</td>
+      <td>6607.0</td>
+      <td>11502.0</td>
+      <td>8357.0</td>
+      <td>3145.0</td>
+      <td>1773.0</td>
+      <td>1732.0</td>
+      <td>41.0</td>
+      <td>7066.0</td>
+      <td>3604.0</td>
+      <td>3462.0</td>
+      <td>0.0</td>
+      <td>2195.0</td>
+      <td>1540.0</td>
+      <td>147.0</td>
+      <td>387.0</td>
+      <td>8.0</td>
+      <td>0.0</td>
+      <td>20.0</td>
+      <td>0.0</td>
+      <td>23.0</td>
+      <td>47.0</td>
+      <td>0.0</td>
+      <td>2159.0</td>
+      <td>1533.0</td>
+      <td>542.0</td>
+      <td>0.0</td>
+      <td>20.0</td>
+      <td>70.0</td>
+      <td>87.0</td>
+      <td>36.0</td>
+      <td>5806.0</td>
+      <td>6264.0</td>
+      <td>6798.0</td>
+      <td>7206.0</td>
+      <td>22495.0</td>
+      <td>31687.0</td>
+      <td>Alabama</td>
+      <td>Alabama</td>
+      <td>Southeast AL AR FL GA KY LA MS NC SC TN VA WV</td>
+      <td>Public, 4-year or above</td>
+      <td>Four or more years</td>
+      <td>Public</td>
+      <td>No</td>
+      <td>No</td>
+      <td>City: Midsize</td>
+      <td>Research Universities (very high research acti...</td>
+      <td>18568.0</td>
+      <td>11961.0</td>
+      <td>6607.0</td>
+      <td>11502.0</td>
+      <td>7066.0</td>
+      <td>8357.0</td>
+      <td>3145.0</td>
+      <td>0.0</td>
+      <td>5.0</td>
+      <td>21.0</td>
+      <td>3.0</td>
+      <td>0.0</td>
+      <td>64.0</td>
+      <td>3.0</td>
+      <td>1.0</td>
+      <td>3.0</td>
+      <td>5.0</td>
+      <td>61.0</td>
+      <td>0.0</td>
+      <td>5.0</td>
+      <td>26.0</td>
+      <td>3.0</td>
+      <td>0.0</td>
+      <td>60.0</td>
+      <td>3.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>5.0</td>
+      <td>58.0</td>
+      <td>0.0</td>
+      <td>4.0</td>
+      <td>14.0</td>
+      <td>3.0</td>
+      <td>0.0</td>
+      <td>70.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>6.0</td>
+      <td>4.0</td>
+      <td>64.0</td>
+      <td>1529.0</td>
+      <td>86.0</td>
+      <td>224.0</td>
+      <td>13.0</td>
+      <td>19.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>29.0</td>
+      <td>46.0</td>
+      <td>53.0</td>
+      <td>90.0</td>
+      <td>79.0</td>
+      <td>36.0</td>
+      <td>36.0</td>
+      <td>10.0</td>
+      <td>0.0</td>
+      <td>60.0</td>
+      <td>56.0</td>
+      <td>55.0</td>
+      <td>5.0</td>
+      <td>24136.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>100690</td>
+      <td>Amridge University</td>
+      <td>2013</td>
+      <td>36117-3553</td>
+      <td>Doctor's degree - research/scholarship and pro...</td>
+      <td>Montgomery County</td>
+      <td>-86.174010</td>
+      <td>32.362609</td>
+      <td>Churches of Christ</td>
+      <td>Implied no</td>
+      <td>Implied no</td>
+      <td>Yes</td>
+      <td>Implied no</td>
+      <td>Yes</td>
+      <td>Implied no</td>
+      <td>Yes</td>
+      <td>Implied no</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Implied no</td>
+      <td>Implied no</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>626.0</td>
+      <td>326.0</td>
+      <td>300.0</td>
+      <td>313.0</td>
+      <td>202.0</td>
+      <td>111.0</td>
+      <td>6.0</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>313.0</td>
+      <td>124.0</td>
+      <td>189.0</td>
+      <td>5.0</td>
+      <td>68.0</td>
+      <td>68.0</td>
+      <td>2.0</td>
+      <td>8.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>5.0</td>
+      <td>68.0</td>
+      <td>60.0</td>
+      <td>10.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>8360.0</td>
+      <td>8720.0</td>
+      <td>6800.0</td>
+      <td>6870.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Alabama</td>
+      <td>Alabama</td>
+      <td>Southeast AL AR FL GA KY LA MS NC SC TN VA WV</td>
+      <td>Private not-for-profit, 4-year or above</td>
+      <td>Four or more years</td>
+      <td>Private not-for-profit</td>
+      <td>No</td>
+      <td>No</td>
+      <td>City: Midsize</td>
+      <td>Baccalaureate Colleges--Arts &amp; Sciences</td>
+      <td>631.0</td>
+      <td>323.0</td>
+      <td>308.0</td>
+      <td>322.0</td>
+      <td>309.0</td>
+      <td>202.0</td>
+      <td>120.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>40.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>30.0</td>
+      <td>0.0</td>
+      <td>28.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>58.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>42.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>29.0</td>
+      <td>0.0</td>
+      <td>27.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>61.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>37.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>32.0</td>
+      <td>0.0</td>
+      <td>29.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>55.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>67.0</td>
+      <td>100.0</td>
+      <td>90.0</td>
+      <td>90.0</td>
+      <td>90.0</td>
+      <td>0.0</td>
+      <td>40.0</td>
+      <td>90.0</td>
+      <td>100.0</td>
+      <td>100.0</td>
+      <td>0.0</td>
+      <td>NaN</td>
+      <td>302.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>100706</td>
+      <td>University of Alabama in Huntsville</td>
+      <td>2013</td>
+      <td>35899</td>
+      <td>Doctor's degree - research/scholarship and pro...</td>
+      <td>Madison County</td>
+      <td>-86.638420</td>
+      <td>34.722818</td>
+      <td>Not applicable</td>
+      <td>Yes</td>
+      <td>Implied no</td>
+      <td>Implied no</td>
+      <td>Implied no</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Implied no</td>
+      <td>Implied no</td>
+      <td>2054.0</td>
+      <td>1656.0</td>
+      <td>651.0</td>
+      <td>34.0</td>
+      <td>94.0</td>
+      <td>510.0</td>
+      <td>640.0</td>
+      <td>510.0</td>
+      <td>650.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>23.0</td>
+      <td>29.0</td>
+      <td>7376.0</td>
+      <td>4802.0</td>
+      <td>2574.0</td>
+      <td>5696.0</td>
+      <td>4237.0</td>
+      <td>1459.0</td>
+      <td>651.0</td>
+      <td>638.0</td>
+      <td>13.0</td>
+      <td>1680.0</td>
+      <td>565.0</td>
+      <td>1115.0</td>
+      <td>0.0</td>
+      <td>1099.0</td>
+      <td>444.0</td>
+      <td>28.0</td>
+      <td>10.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>24.0</td>
+      <td>5.0</td>
+      <td>0.0</td>
+      <td>1091.0</td>
+      <td>444.0</td>
+      <td>38.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>28.0</td>
+      <td>81.0</td>
+      <td>39.0</td>
+      <td>7492.0</td>
+      <td>8094.0</td>
+      <td>8794.0</td>
+      <td>9192.0</td>
+      <td>23466.0</td>
+      <td>35780.0</td>
+      <td>Alabama</td>
+      <td>Alabama</td>
+      <td>Southeast AL AR FL GA KY LA MS NC SC TN VA WV</td>
+      <td>Public, 4-year or above</td>
+      <td>Four or more years</td>
+      <td>Public</td>
+      <td>No</td>
+      <td>No</td>
+      <td>City: Midsize</td>
+      <td>Research Universities (very high research acti...</td>
+      <td>7376.0</td>
+      <td>4802.0</td>
+      <td>2574.0</td>
+      <td>5696.0</td>
+      <td>1680.0</td>
+      <td>4237.0</td>
+      <td>1459.0</td>
+      <td>1.0</td>
+      <td>4.0</td>
+      <td>12.0</td>
+      <td>3.0</td>
+      <td>0.0</td>
+      <td>69.0</td>
+      <td>1.0</td>
+      <td>3.0</td>
+      <td>6.0</td>
+      <td>4.0</td>
+      <td>44.0</td>
+      <td>1.0</td>
+      <td>4.0</td>
+      <td>13.0</td>
+      <td>3.0</td>
+      <td>0.0</td>
+      <td>70.0</td>
+      <td>2.0</td>
+      <td>3.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>44.0</td>
+      <td>1.0</td>
+      <td>4.0</td>
+      <td>7.0</td>
+      <td>2.0</td>
+      <td>0.0</td>
+      <td>69.0</td>
+      <td>1.0</td>
+      <td>3.0</td>
+      <td>14.0</td>
+      <td>4.0</td>
+      <td>43.0</td>
+      <td>514.0</td>
+      <td>79.0</td>
+      <td>92.0</td>
+      <td>14.0</td>
+      <td>27.0</td>
+      <td>4.0</td>
+      <td>18.0</td>
+      <td>3.0</td>
+      <td>16.0</td>
+      <td>37.0</td>
+      <td>48.0</td>
+      <td>87.0</td>
+      <td>77.0</td>
+      <td>31.0</td>
+      <td>31.0</td>
+      <td>4.0</td>
+      <td>1.0</td>
+      <td>63.0</td>
+      <td>46.0</td>
+      <td>46.0</td>
+      <td>3.0</td>
+      <td>11502.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>100724</td>
+      <td>Alabama State University</td>
+      <td>2013</td>
+      <td>36104-0271</td>
+      <td>Doctor's degree - research/scholarship and pro...</td>
+      <td>Montgomery County</td>
+      <td>-86.295677</td>
+      <td>32.364317</td>
+      <td>Not applicable</td>
+      <td>Implied no</td>
+      <td>Implied no</td>
+      <td>Implied no</td>
+      <td>Implied no</td>
+      <td>Yes</td>
+      <td>Implied no</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Implied no</td>
+      <td>Implied no</td>
+      <td>10245.0</td>
+      <td>5251.0</td>
+      <td>1479.0</td>
+      <td>18.0</td>
+      <td>87.0</td>
+      <td>380.0</td>
+      <td>480.0</td>
+      <td>370.0</td>
+      <td>480.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>15.0</td>
+      <td>19.0</td>
+      <td>6076.0</td>
+      <td>5183.0</td>
+      <td>893.0</td>
+      <td>5357.0</td>
+      <td>4873.0</td>
+      <td>484.0</td>
+      <td>1542.0</td>
+      <td>1517.0</td>
+      <td>25.0</td>
+      <td>719.0</td>
+      <td>310.0</td>
+      <td>409.0</td>
+      <td>0.0</td>
+      <td>600.0</td>
+      <td>147.0</td>
+      <td>3.0</td>
+      <td>45.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>27.0</td>
+      <td>0.0</td>
+      <td>599.0</td>
+      <td>147.0</td>
+      <td>48.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>27.0</td>
+      <td>51.0</td>
+      <td>28.0</td>
+      <td>7164.0</td>
+      <td>8082.0</td>
+      <td>7932.0</td>
+      <td>8720.0</td>
+      <td>18286.0</td>
+      <td>25222.0</td>
+      <td>Alabama</td>
+      <td>Alabama</td>
+      <td>Southeast AL AR FL GA KY LA MS NC SC TN VA WV</td>
+      <td>Public, 4-year or above</td>
+      <td>Four or more years</td>
+      <td>Public</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>City: Midsize</td>
+      <td>Master's Colleges and Universities (larger pro...</td>
+      <td>6075.0</td>
+      <td>5182.0</td>
+      <td>893.0</td>
+      <td>5356.0</td>
+      <td>719.0</td>
+      <td>4872.0</td>
+      <td>484.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>91.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>3.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>0.0</td>
+      <td>61.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>93.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>0.0</td>
+      <td>59.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>77.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>17.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>71.0</td>
+      <td>903.0</td>
+      <td>58.0</td>
+      <td>571.0</td>
+      <td>37.0</td>
+      <td>67.0</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>0.0</td>
+      <td>9.0</td>
+      <td>19.0</td>
+      <td>25.0</td>
+      <td>93.0</td>
+      <td>87.0</td>
+      <td>76.0</td>
+      <td>76.0</td>
+      <td>13.0</td>
+      <td>11.0</td>
+      <td>34.0</td>
+      <td>81.0</td>
+      <td>81.0</td>
+      <td>0.0</td>
+      <td>13202.0</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Compréhension de la base de donnée</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 1534 entries, 0 to 1533
+Columns: 145 entries, ID number to Endowment assets (year end) per FTE enrollment (FASB)
+dtypes: float64(116), int64(2), object(27)
+memory usage: 1.7+ MB
+</pre></div>
+</div>
+</div>
+</div>
+<p>Nettoyage</p>
+<p>On constate un nombre important de variables dans notre base de  données, alors nous allons uniquement sélectionner les varibles
+qui cadre avec nos objectifs d’ananlyse.</p>
+<p>les variables qui seront utiliser pour notre analyse sont:</p>
+<p>Name = universités</p>
+<p>Applicants total = total des candidats</p>
+<p>Admissions total = total des admissions</p>
+<p>Enrolled total</p>
+<p>Total price for in-state students living on campus 2013-14 = prix total pour les etudiants americain vivant sur le campus</p>
+<p>Total price for out-of-state students living on campus 2013-14 = prix total pour les etudiants etranger  vivant sur le campus</p>
+<p>Control of institution = université privé ou public</p>
+<p>Total  enrollment = total des inscrits</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">colonnes_retenues</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Name&#39;</span><span class="p">,</span><span class="s1">&#39;Applicants total&#39;</span><span class="p">,</span>
+                     <span class="s1">&#39;Admissions total&#39;</span><span class="p">,</span><span class="s1">&#39;Enrolled total&#39;</span><span class="p">,</span>
+                     <span class="s1">&#39;Total price for in-state students living on campus 2013-14&#39;</span><span class="p">,</span>
+                     <span class="s1">&#39;Total price for out-of-state students living on campus 2013-14&#39;</span><span class="p">,</span>
+                     <span class="s1">&#39;Control of institution&#39;</span><span class="p">,</span><span class="s1">&#39;Total  enrollment&#39;</span>
+                    <span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">colonnes_retenues</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Name</th>
+      <th>Applicants total</th>
+      <th>Admissions total</th>
+      <th>Enrolled total</th>
+      <th>Total price for in-state students living on campus 2013-14</th>
+      <th>Total price for out-of-state students living on campus 2013-14</th>
+      <th>Control of institution</th>
+      <th>Total  enrollment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Alabama A &amp; M University</td>
+      <td>6142.0</td>
+      <td>5521.0</td>
+      <td>1104.0</td>
+      <td>21849.0</td>
+      <td>27441.0</td>
+      <td>Public</td>
+      <td>5020.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>University of Alabama at Birmingham</td>
+      <td>5689.0</td>
+      <td>4934.0</td>
+      <td>1773.0</td>
+      <td>22495.0</td>
+      <td>31687.0</td>
+      <td>Public</td>
+      <td>18568.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Amridge University</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Private not-for-profit</td>
+      <td>631.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>University of Alabama in Huntsville</td>
+      <td>2054.0</td>
+      <td>1656.0</td>
+      <td>651.0</td>
+      <td>23466.0</td>
+      <td>35780.0</td>
+      <td>Public</td>
+      <td>7376.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Alabama State University</td>
+      <td>10245.0</td>
+      <td>5251.0</td>
+      <td>1479.0</td>
+      <td>18286.0</td>
+      <td>25222.0</td>
+      <td>Public</td>
+      <td>6075.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>1529</th>
+      <td>University of South Florida-Sarasota-Manatee</td>
+      <td>393.0</td>
+      <td>136.0</td>
+      <td>86.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Public</td>
+      <td>1877.0</td>
+    </tr>
+    <tr>
+      <th>1530</th>
+      <td>The Kingâ€™s College</td>
+      <td>3033.0</td>
+      <td>2158.0</td>
+      <td>127.0</td>
+      <td>48717.0</td>
+      <td>48717.0</td>
+      <td>Private not-for-profit</td>
+      <td>516.0</td>
+    </tr>
+    <tr>
+      <th>1531</th>
+      <td>Ottawa University-Online</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Private not-for-profit</td>
+      <td>458.0</td>
+    </tr>
+    <tr>
+      <th>1532</th>
+      <td>Providence Christian College</td>
+      <td>122.0</td>
+      <td>65.0</td>
+      <td>20.0</td>
+      <td>38602.0</td>
+      <td>38602.0</td>
+      <td>Private not-for-profit</td>
+      <td>66.0</td>
+    </tr>
+    <tr>
+      <th>1533</th>
+      <td>Polytechnic University of Puerto Rico-Orlando</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Private not-for-profit</td>
+      <td>125.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>1534 rows × 8 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 1534 entries, 0 to 1533
+Data columns (total 8 columns):
+ #   Column                                                          Non-Null Count  Dtype  
+---  ------                                                          --------------  -----  
+ 0   Name                                                            1534 non-null   object 
+ 1   Applicants total                                                1377 non-null   float64
+ 2   Admissions total                                                1377 non-null   float64
+ 3   Enrolled total                                                  1377 non-null   float64
+ 4   Total price for in-state students living on campus 2013-14      1400 non-null   float64
+ 5   Total price for out-of-state students living on campus 2013-14  1400 non-null   float64
+ 6   Control of institution                                          1534 non-null   object 
+ 7   Total  enrollment                                               1532 non-null   float64
+dtypes: float64(6), object(2)
+memory usage: 96.0+ KB
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Name</th>
+      <th>Applicants total</th>
+      <th>Admissions total</th>
+      <th>Enrolled total</th>
+      <th>Total price for in-state students living on campus 2013-14</th>
+      <th>Total price for out-of-state students living on campus 2013-14</th>
+      <th>Control of institution</th>
+      <th>Total  enrollment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Alabama A &amp; M University</td>
+      <td>6142.0</td>
+      <td>5521.0</td>
+      <td>1104.0</td>
+      <td>21849.0</td>
+      <td>27441.0</td>
+      <td>Public</td>
+      <td>5020.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>University of Alabama at Birmingham</td>
+      <td>5689.0</td>
+      <td>4934.0</td>
+      <td>1773.0</td>
+      <td>22495.0</td>
+      <td>31687.0</td>
+      <td>Public</td>
+      <td>18568.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Amridge University</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Private not-for-profit</td>
+      <td>631.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>University of Alabama in Huntsville</td>
+      <td>2054.0</td>
+      <td>1656.0</td>
+      <td>651.0</td>
+      <td>23466.0</td>
+      <td>35780.0</td>
+      <td>Public</td>
+      <td>7376.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Alabama State University</td>
+      <td>10245.0</td>
+      <td>5251.0</td>
+      <td>1479.0</td>
+      <td>18286.0</td>
+      <td>25222.0</td>
+      <td>Public</td>
+      <td>6075.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Name</th>
+      <th>Applicants total</th>
+      <th>Admissions total</th>
+      <th>Enrolled total</th>
+      <th>Total price for in-state students living on campus 2013-14</th>
+      <th>Total price for out-of-state students living on campus 2013-14</th>
+      <th>Control of institution</th>
+      <th>Total  enrollment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1529</th>
+      <td>University of South Florida-Sarasota-Manatee</td>
+      <td>393.0</td>
+      <td>136.0</td>
+      <td>86.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Public</td>
+      <td>1877.0</td>
+    </tr>
+    <tr>
+      <th>1530</th>
+      <td>The Kingâ€™s College</td>
+      <td>3033.0</td>
+      <td>2158.0</td>
+      <td>127.0</td>
+      <td>48717.0</td>
+      <td>48717.0</td>
+      <td>Private not-for-profit</td>
+      <td>516.0</td>
+    </tr>
+    <tr>
+      <th>1531</th>
+      <td>Ottawa University-Online</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Private not-for-profit</td>
+      <td>458.0</td>
+    </tr>
+    <tr>
+      <th>1532</th>
+      <td>Providence Christian College</td>
+      <td>122.0</td>
+      <td>65.0</td>
+      <td>20.0</td>
+      <td>38602.0</td>
+      <td>38602.0</td>
+      <td>Private not-for-profit</td>
+      <td>66.0</td>
+    </tr>
+    <tr>
+      <th>1533</th>
+      <td>Polytechnic University of Puerto Rico-Orlando</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Private not-for-profit</td>
+      <td>125.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Name                                                                0
+Applicants total                                                  157
+Admissions total                                                  157
+Enrolled total                                                    157
+Total price for in-state students living on campus 2013-14        134
+Total price for out-of-state students living on campus 2013-14    134
+Control of institution                                              0
+Total  enrollment                                                   2
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">duplicated</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#le pourecentage des valeurs manquantes</span>
+<span class="n">missing_value</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">percent</span> <span class="o">=</span> <span class="p">(</span><span class="n">missing_value</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">missing_table</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;valeurs manquantes&#39;</span><span class="p">:</span> <span class="n">missing_value</span><span class="p">,</span> <span class="s1">&#39;pourcentage&#39;</span><span class="p">:</span> <span class="n">percent</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">missing_table</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>valeurs manquantes</th>
+      <th>pourcentage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Name</th>
+      <td>0</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>Applicants total</th>
+      <td>157</td>
+      <td>10.234681</td>
+    </tr>
+    <tr>
+      <th>Admissions total</th>
+      <td>157</td>
+      <td>10.234681</td>
+    </tr>
+    <tr>
+      <th>Enrolled total</th>
+      <td>157</td>
+      <td>10.234681</td>
+    </tr>
+    <tr>
+      <th>Total price for in-state students living on campus 2013-14</th>
+      <td>134</td>
+      <td>8.735332</td>
+    </tr>
+    <tr>
+      <th>Total price for out-of-state students living on campus 2013-14</th>
+      <td>134</td>
+      <td>8.735332</td>
+    </tr>
+    <tr>
+      <th>Control of institution</th>
+      <td>0</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>Total  enrollment</th>
+      <td>2</td>
+      <td>0.130378</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Identifions le type de valeurs manquantes</span>
+<span class="n">msno</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+</pre></div>
+</div>
+<img alt="_images/67e8abba4d81f03f3aff53363c03f554bf3cb513eeab05caf279524134974213.png" src="_images/67e8abba4d81f03f3aff53363c03f554bf3cb513eeab05caf279524134974213.png" />
+</div>
+</div>
+<p>On constate de fortes corrélation entre les valeurs manquantes, il s’agit des MAR(aléatoires) données manquantes aléatoires
+missing are random</p>
+<p>les valeurs manquantes dépendent des autres données observées mais pas des données manquantes</p>
+<p>si nous avions les valeur pour d’autre années antérieur, nous aurions pu remplacer par la moyenne les valeurs manquantes</p>
+<p>mais ici on a uniquement les valeurs pour la période 2013-14</p>
+<p>donc on va simplement supprimer les nan.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Applicants total&#39;</span><span class="p">,</span>
+                     <span class="s1">&#39;Admissions total&#39;</span><span class="p">,</span><span class="s1">&#39;Enrolled total&#39;</span><span class="p">,</span>
+                     <span class="s1">&#39;Total price for in-state students living on campus 2013-14&#39;</span><span class="p">,</span>
+                     <span class="s1">&#39;Total price for out-of-state students living on campus 2013-14&#39;</span><span class="p">,</span><span class="s1">&#39;Total  enrollment&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Name                                                              0
+Applicants total                                                  0
+Admissions total                                                  0
+Enrolled total                                                    0
+Total price for in-state students living on campus 2013-14        0
+Total price for out-of-state students living on campus 2013-14    0
+Control of institution                                            0
+Total  enrollment                                                 0
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#indentifons le nombre de ligne restante</span>
+<span class="n">data</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1326, 8)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#On constate que les nom de colonne ont des espaces et des carctères spéciaux ce qui peut engendrer des érreurs. et donc</span>
+<span class="c1">#on va remplacer les caractères spéciaux et les espaces par le tiret du 8.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#créons une fonction pour le faire</span>
+<span class="k">def</span> <span class="nf">supprimer_espace</span><span class="p">(</span><span class="n">nom_colonne</span><span class="p">):</span>
+    <span class="n">liste</span><span class="o">=</span><span class="p">[]</span>
+    <span class="n">mot_colonne</span> <span class="o">=</span> <span class="n">nom_colonne</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+    <span class="n">size</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mot_colonne</span><span class="p">))</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">size</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">size</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+            <span class="n">liste</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mot_colonne</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="s1">&#39;_&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">liste</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mot_colonne</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        
+    <span class="n">nouveau_nom_colonne</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">nouveau_nom_colonne</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">supprimer_espace</span><span class="p">(</span><span class="s1">&#39;Total price for in-state students living on campus 2013-14&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Total_price_for_in-state_students_living_on_campus_2013-14&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#creer un bout de code qui va nous permettre de transformer nos colonnes d&#39;un coup </span>
+<span class="n">liste_nouveau_nom_colonne</span> <span class="o">=</span><span class="p">[]</span>
+<span class="n">colonnes</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">columns</span> 
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">colonnes</span><span class="p">:</span> 
+    <span class="n">nouvelle_colonnes</span> <span class="o">=</span> <span class="n">supprimer_espace</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> 
+    <span class="n">liste_nouveau_nom_colonne</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">nouvelle_colonnes</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">liste_nouveau_nom_colonne</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Name&#39;,
+ &#39;Applicants_total&#39;,
+ &#39;Admissions_total&#39;,
+ &#39;Enrolled_total&#39;,
+ &#39;Total_price_for_in-state_students_living_on_campus_2013-14&#39;,
+ &#39;Total_price_for_out-of-state_students_living_on_campus_2013-14&#39;,
+ &#39;Control_of_institution&#39;,
+ &#39;Total_enrollment&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">liste_nouveau_nom_colonne</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Name</th>
+      <th>Applicants_total</th>
+      <th>Admissions_total</th>
+      <th>Enrolled_total</th>
+      <th>Total_price_for_in-state_students_living_on_campus_2013-14</th>
+      <th>Total_price_for_out-of-state_students_living_on_campus_2013-14</th>
+      <th>Control_of_institution</th>
+      <th>Total_enrollment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Alabama A &amp; M University</td>
+      <td>6142.0</td>
+      <td>5521.0</td>
+      <td>1104.0</td>
+      <td>21849.0</td>
+      <td>27441.0</td>
+      <td>Public</td>
+      <td>5020.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>University of Alabama at Birmingham</td>
+      <td>5689.0</td>
+      <td>4934.0</td>
+      <td>1773.0</td>
+      <td>22495.0</td>
+      <td>31687.0</td>
+      <td>Public</td>
+      <td>18568.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>University of Alabama in Huntsville</td>
+      <td>2054.0</td>
+      <td>1656.0</td>
+      <td>651.0</td>
+      <td>23466.0</td>
+      <td>35780.0</td>
+      <td>Public</td>
+      <td>7376.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Alabama State University</td>
+      <td>10245.0</td>
+      <td>5251.0</td>
+      <td>1479.0</td>
+      <td>18286.0</td>
+      <td>25222.0</td>
+      <td>Public</td>
+      <td>6075.0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>The University of Alabama</td>
+      <td>30975.0</td>
+      <td>17515.0</td>
+      <td>6454.0</td>
+      <td>27000.0</td>
+      <td>41500.0</td>
+      <td>Public</td>
+      <td>34752.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>statistique descriptive</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#obtenir une idée global de la nouvelle population que nous aurons a traiter </span>
+<span class="c1">#pour le minimum on a 4 pour le total des candidatures, egalement 4 pour le total des admissions</span>
+<span class="c1">#et 2 pour le total des inscrits</span>
+<span class="c1">#cela nous ammene a nous demamnder a qui appartient ces valeurs parce que 2 inscriptions uniquement pour une </span>
+<span class="c1">#année universitaire nous amene a nous poser des questions </span>
+<span class="n">data</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Applicants_total</th>
+      <th>Admissions_total</th>
+      <th>Enrolled_total</th>
+      <th>Total_price_for_in-state_students_living_on_campus_2013-14</th>
+      <th>Total_price_for_out-of-state_students_living_on_campus_2013-14</th>
+      <th>Total_enrollment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>1326.000000</td>
+      <td>1326.000000</td>
+      <td>1326.000000</td>
+      <td>1326.000000</td>
+      <td>1326.000000</td>
+      <td>1326.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>6562.079186</td>
+      <td>3638.870287</td>
+      <td>1064.596531</td>
+      <td>35607.657617</td>
+      <td>39457.417798</td>
+      <td>7501.159879</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>8887.252631</td>
+      <td>4346.785651</td>
+      <td>1297.577558</td>
+      <td>13211.675469</td>
+      <td>10464.105131</td>
+      <td>9664.482557</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>4.000000</td>
+      <td>4.000000</td>
+      <td>2.000000</td>
+      <td>11398.000000</td>
+      <td>11398.000000</td>
+      <td>66.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>1595.500000</td>
+      <td>995.250000</td>
+      <td>298.000000</td>
+      <td>23172.250000</td>
+      <td>31842.000000</td>
+      <td>1701.000000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>3452.000000</td>
+      <td>2092.500000</td>
+      <td>545.000000</td>
+      <td>35185.000000</td>
+      <td>37902.000000</td>
+      <td>3414.000000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>7135.250000</td>
+      <td>4347.750000</td>
+      <td>1265.750000</td>
+      <td>45469.500000</td>
+      <td>46323.000000</td>
+      <td>8943.750000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>72676.000000</td>
+      <td>35815.000000</td>
+      <td>10241.000000</td>
+      <td>64988.000000</td>
+      <td>64988.000000</td>
+      <td>77338.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Applicants tota</span>
+<span class="c1"># count = 1326.000000 universités</span>
+<span class="c1"># mean = 6562.079186 candidature moyenne par université</span>
+<span class="c1"># std = 8887.252631 il y a une forte dispersion de candidature entre les universités entre des université qui ont un fort taux </span>
+<span class="c1"># de candidature et d&#39;autre qui ont un faible taux de candidature </span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#cherchons a qui appartient ces valeur</span>
+<span class="n">data</span><span class="p">[[</span><span class="s1">&#39;Name&#39;</span><span class="p">,</span><span class="s1">&#39;Applicants_total&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;Applicants_total&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<span class="c1">#on constate que les candidature de 4 sont pour Goddard College et donc on va vérifier que ces valeurs soit conforme car</span>
+<span class="c1">#4 candidature pour une école ça fait peu</span>
+<span class="c1">#et donc on  va aller sur le site : https://datausa.io/profile/university/goddard-college#admission</span>
+<span class="c1">#pour l&#39;annee 2014 on constate que l&#39;on a 7 candidatures et 7 admissions; pour l&#39;année 2015 c&#39;est 12 candidatures et 12 admissions</span>
+<span class="c1">#pour 2016 c&#39;est 16 candidatures et 12 admissions, 2017 c&#39;est 4 candidatures et 4 admissions</span>
+<span class="c1">#et donc on peut conclure que c&#39;est normal d&#39;avoir 4 comme valeur pour Goddard College car chaque année il a un nombre</span>
+<span class="c1">#limité de candidature et d&#39;admission.</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Name</th>
+      <th>Applicants_total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1343</th>
+      <td>Goddard College</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>1354</th>
+      <td>Sterling College</td>
+      <td>49.0</td>
+    </tr>
+    <tr>
+      <th>396</th>
+      <td>Maharishi University of Management</td>
+      <td>74.0</td>
+    </tr>
+    <tr>
+      <th>155</th>
+      <td>Naropa University</td>
+      <td>79.0</td>
+    </tr>
+    <tr>
+      <th>105</th>
+      <td>American Jewish University</td>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <th>1222</th>
+      <td>Aquinas College</td>
+      <td>119.0</td>
+    </tr>
+    <tr>
+      <th>1532</th>
+      <td>Providence Christian College</td>
+      <td>122.0</td>
+    </tr>
+    <tr>
+      <th>67</th>
+      <td>Alliant International University</td>
+      <td>128.0</td>
+    </tr>
+    <tr>
+      <th>1489</th>
+      <td>Beacon College</td>
+      <td>139.0</td>
+    </tr>
+    <tr>
+      <th>614</th>
+      <td>Kuyper College</td>
+      <td>152.0</td>
+    </tr>
+    <tr>
+      <th>266</th>
+      <td>Thomas University</td>
+      <td>153.0</td>
+    </tr>
+    <tr>
+      <th>941</th>
+      <td>Mid-Atlantic Christian University</td>
+      <td>168.0</td>
+    </tr>
+    <tr>
+      <th>1452</th>
+      <td>Silver Lake College of the Holy Family</td>
+      <td>170.0</td>
+    </tr>
+    <tr>
+      <th>138</th>
+      <td>Thomas Aquinas College</td>
+      <td>178.0</td>
+    </tr>
+    <tr>
+      <th>1352</th>
+      <td>College of St Joseph</td>
+      <td>183.0</td>
+    </tr>
+    <tr>
+      <th>1340</th>
+      <td>Burlington College</td>
+      <td>199.0</td>
+    </tr>
+    <tr>
+      <th>1472</th>
+      <td>St John's College</td>
+      <td>205.0</td>
+    </tr>
+    <tr>
+      <th>628</th>
+      <td>Martin Luther College</td>
+      <td>209.0</td>
+    </tr>
+    <tr>
+      <th>564</th>
+      <td>Bard College at Simon's Rock</td>
+      <td>218.0</td>
+    </tr>
+    <tr>
+      <th>1388</th>
+      <td>Virginia Intermont College</td>
+      <td>226.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Question1: quel sont les universités ayant reçu le plus grand nombre de candidature</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">top_univ_cand</span> <span class="o">=</span> <span class="n">data</span><span class="p">[[</span><span class="s1">&#39;Name&#39;</span><span class="p">,</span><span class="s1">&#39;Applicants_total&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;Applicants_total&#39;</span><span class="p">,</span><span class="n">ascending</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">top_univ_cand</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Name</th>
+      <th>Applicants_total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>84</th>
+      <td>University of California-Los Angeles</td>
+      <td>72676.0</td>
+    </tr>
+    <tr>
+      <th>81</th>
+      <td>University of California-Berkeley</td>
+      <td>61717.0</td>
+    </tr>
+    <tr>
+      <th>86</th>
+      <td>University of California-San Diego</td>
+      <td>60832.0</td>
+    </tr>
+    <tr>
+      <th>841</th>
+      <td>New York University</td>
+      <td>57845.0</td>
+    </tr>
+    <tr>
+      <th>83</th>
+      <td>University of California-Irvine</td>
+      <td>56515.0</td>
+    </tr>
+    <tr>
+      <th>87</th>
+      <td>University of California-Santa Barbara</td>
+      <td>55258.0</td>
+    </tr>
+    <tr>
+      <th>77</th>
+      <td>California State University-Long Beach</td>
+      <td>55019.0</td>
+    </tr>
+    <tr>
+      <th>863</th>
+      <td>St John's University-New York</td>
+      <td>51634.0</td>
+    </tr>
+    <tr>
+      <th>126</th>
+      <td>San Diego State University</td>
+      <td>51163.0</td>
+    </tr>
+    <tr>
+      <th>82</th>
+      <td>University of California-Davis</td>
+      <td>49820.0</td>
+    </tr>
+    <tr>
+      <th>1371</th>
+      <td>Liberty University</td>
+      <td>48054.0</td>
+    </tr>
+    <tr>
+      <th>1133</th>
+      <td>Pennsylvania State University-Main Campus</td>
+      <td>47552.0</td>
+    </tr>
+    <tr>
+      <th>559</th>
+      <td>Northeastern University</td>
+      <td>47364.0</td>
+    </tr>
+    <tr>
+      <th>137</th>
+      <td>University of Southern California</td>
+      <td>47358.0</td>
+    </tr>
+    <tr>
+      <th>605</th>
+      <td>University of Michigan-Ann Arbor</td>
+      <td>46813.0</td>
+    </tr>
+    <tr>
+      <th>529</th>
+      <td>Boston University</td>
+      <td>44006.0</td>
+    </tr>
+    <tr>
+      <th>1080</th>
+      <td>Drexel University</td>
+      <td>43945.0</td>
+    </tr>
+    <tr>
+      <th>634</th>
+      <td>University of Minnesota-Twin Cities</td>
+      <td>43048.0</td>
+    </tr>
+    <tr>
+      <th>796</th>
+      <td>Cornell University</td>
+      <td>39999.0</td>
+    </tr>
+    <tr>
+      <th>75</th>
+      <td>California State University-Fullerton</td>
+      <td>38909.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#représentation graphique</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;Applicants_total&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Name&#39;</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">top_univ_cand</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;le top 20 des universités ayant reçu le plus grand nombre de candidature&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Canditatures total&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Université&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Université&#39;)
+</pre></div>
+</div>
+<img alt="_images/9ef6ae7b4a642368d51514955c27a9aecc654deddf44bd76ee133e1bc09906c0.png" src="_images/9ef6ae7b4a642368d51514955c27a9aecc654deddf44bd76ee133e1bc09906c0.png" />
+</div>
+</div>
+<p>Question2: y’a t’il une correlation entre le nombre de candidature, le nombre d’admission , et le nombre d’inscription</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#on va creer une nouvelle variable pour stoker les variables dont nous avons besoins</span>
+<span class="n">data1</span> <span class="o">=</span> <span class="n">data</span><span class="p">[[</span><span class="s1">&#39;Applicants_total&#39;</span><span class="p">,</span> <span class="s1">&#39;Admissions_total&#39;</span><span class="p">,</span><span class="s1">&#39;Enrolled_total&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data1</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Applicants_total</th>
+      <th>Admissions_total</th>
+      <th>Enrolled_total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>6142.0</td>
+      <td>5521.0</td>
+      <td>1104.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>5689.0</td>
+      <td>4934.0</td>
+      <td>1773.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2054.0</td>
+      <td>1656.0</td>
+      <td>651.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>10245.0</td>
+      <td>5251.0</td>
+      <td>1479.0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>30975.0</td>
+      <td>17515.0</td>
+      <td>6454.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">correlation</span> <span class="o">=</span> <span class="n">data1</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">correlation</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Applicants_total</th>
+      <th>Admissions_total</th>
+      <th>Enrolled_total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Applicants_total</th>
+      <td>1.000000</td>
+      <td>0.853196</td>
+      <td>0.783967</td>
+    </tr>
+    <tr>
+      <th>Admissions_total</th>
+      <td>0.853196</td>
+      <td>1.000000</td>
+      <td>0.883784</td>
+    </tr>
+    <tr>
+      <th>Enrolled_total</th>
+      <td>0.783967</td>
+      <td>0.883784</td>
+      <td>1.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>on constate qu’il ya une forte correlation entre les candidatures et les admission 0.85</p>
+<p>il ya une forte correlation entre les candidatures et les inscriptions 0.78</p>
+<p>il ya une forte correlation entre les admission et les inscriptions 0.88</p>
+<p>alors on peut dire que
+tant que le nombre de candidature augmente celui des admissions augmente aussi</p>
+<p>tant que le nombre de des admissions augmente , celui des inscriptions augmente aussi</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Représenattion graphique</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">correlation</span><span class="p">,</span> <span class="n">annot</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+</pre></div>
+</div>
+<img alt="_images/469c6d3025e3cf369f1f82ed72766b6c6178b2a1c35d3f5abbab93e84ebe0aeb.png" src="_images/469c6d3025e3cf369f1f82ed72766b6c6178b2a1c35d3f5abbab93e84ebe0aeb.png" />
+</div>
+</div>
+<p>Question3: Nombre des universités en fonction du nombre de candidature, d’admission et d’inscrit</p>
+<p>Nombre d’universités selon le nombre de candidature:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Applicants_total&#39;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">40</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;total des candidatures&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Nombre d&#39;université&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Nombre d&#39;universités selon le nombre de candidature&quot;</span><span class="p">)</span>
+
+<span class="n">median</span> <span class="o">=</span> <span class="s2">&quot;la mediane est :</span><span class="si">{:.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Applicants_total&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">())</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">median</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>la mediane est :3452.00
+</pre></div>
+</div>
+<img alt="_images/2972faf9914d267f1da8cd4d69d410a2ef520e6f6754e5021f8f6fb8a62b052b.png" src="_images/2972faf9914d267f1da8cd4d69d410a2ef520e6f6754e5021f8f6fb8a62b052b.png" />
+</div>
+</div>
+<p>Environs la moitier des universités soit 200 reçoivent moins de 5000 candidatures.</p>
+<p>Au-delà de 3000 candidatures il ya un nombre de plus en plus restraint d’université qui reçoivent plus de 3000 candidatures</p>
+<p>Nombre d’universités selon le nombre d’admission:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Admissions_total&#39;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">40</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;total des candidatures&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Nombre d&#39;université&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Nombre d&#39;universités selon le nombre d&#39;Admissions&quot;</span><span class="p">)</span>
+
+<span class="n">median</span> <span class="o">=</span> <span class="s2">&quot;la mediane est :</span><span class="si">{:.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Admissions_total&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">())</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">median</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>la mediane est :2092.50
+</pre></div>
+</div>
+<img alt="_images/dbda5e523e321642f57d6d4b4b86d30fd749848d48d7d578e3c454a9f2623c86.png" src="_images/dbda5e523e321642f57d6d4b4b86d30fd749848d48d7d578e3c454a9f2623c86.png" />
+</div>
+</div>
+<p>Nous avons moins d’universités ayant admis des candandidats que d’université
+ayant reçu des candidatures</p>
+<p>la majorité des universités accèptent moins de 2500 candidatures
+au-delà de 2500 candidatures, il y a de moins en moins d’université qui
+admenttent des candidats</p>
+<p>Nombre d’universités selon le nombre d’inscrit</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Enrolled_total&#39;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span> <span class="mi">30</span> <span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Nombre d&#39;universités selon le nombre d&#39;inscrit&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Nombre d&#39;inscrit&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Nombre d&#39;université&quot;</span><span class="p">)</span>
+
+
+
+
+<span class="n">mediane</span> <span class="o">=</span> <span class="s2">&quot;La médianne est :</span><span class="si">{:.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Enrolled_total&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">())</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">mediane</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>La médianne est :545.00
+</pre></div>
+</div>
+<img alt="_images/848af8ede30496359d87e5473e383fa242f2654e00c3d9893d39eff944bfa0c9.png" src="_images/848af8ede30496359d87e5473e383fa242f2654e00c3d9893d39eff944bfa0c9.png" />
+</div>
+</div>
+<p>La majorités des université enregistre moins de 600 inscrit, au-delà
+nous avons un nombre restraint d’université qui enregistre plus de 1000 inscrits</p>
+<p>Question4: est-ce que les universités avec un nombre élevé d’admissions sont-elles les plus préférées par les etudiants</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#on va croiser le nombre de candidature et d&#39;admission tout en distinguant les établissements privé et public</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">Applicants_total</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">Admissions_total</span><span class="p">,</span> <span class="n">hue</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">Control_of_institution</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Nombre de candidatures&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Nombre d&#39;admissions&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;croisement candidatures et admissions&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">16</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/37fe08f0fdb4348bf563e85fa029335c8d909acca68d35c568bf4feaacdf27ec.png" src="_images/37fe08f0fdb4348bf563e85fa029335c8d909acca68d35c568bf4feaacdf27ec.png" />
+</div>
+</div>
+<p>On constate que le nombre d’admission croit avec le nombre de candidatures, les établissements publics ont tendance a admettre
+plus de candidat de les établissements privés, mais on constate également  les établissement qui reçoivent le plus de candidatures
+ne sont pas forcément celle qui admettent le plus de candidat.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">Admissions_total</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">Enrolled_total</span><span class="p">,</span> <span class="n">hue</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">Control_of_institution</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Nombre d&#39;admission&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Nombre d&#39;inscrits&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;croisement les admissions et inscription&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">16</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/175a49311a3ec943d38a8d2a3c23af5db24a37173b4d616caf1e49bd3ba921e3.png" src="_images/175a49311a3ec943d38a8d2a3c23af5db24a37173b4d616caf1e49bd3ba921e3.png" />
+</div>
+</div>
+<p>On constate que le nombre d’inscrit augmente avec le nombre d’admissions, et on a tendance a avoir plus d’inscrit dans les universités
+public que dan les universités privées, et un nombre d’admission élevé ne garanti pas un nécéssairement un grand nombre d’inscrit</p>
+<p>attention ce raisonnement se base  le nombre d’admission et le nombre d’inscrit ,ce qui peut fausser</p>
+<p>nos conclusions a la question si les universités avec un nombre élevé d’admissions sont-elles les plus préférées par les etudiants</p>
+<p>et pour répondre a cette question nous devons nous baser sur la proportion et donc le taux</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#alors on va calculer le taux d&#39;inscription</span>
+<span class="c1">#et croiser le nombre d&#39;admission avec le taux d&#39;inscription</span>
+<span class="c1">#et on va creer une nouvelle colonne qui va s&#39;appeller taux d&#39;inscription</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;Taux_inscription&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">Enrolled_total</span><span class="o">/</span><span class="n">data</span><span class="o">.</span><span class="n">Admissions_total</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="c1">#arrondir a deux : round(2)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Lenoovo\AppData\Local\Temp\ipykernel_17492\669242991.py:4: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  data[&#39;Taux_inscription&#39;] = (data.Enrolled_total/data.Admissions_total*100).round(2)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Name</th>
+      <th>Applicants_total</th>
+      <th>Admissions_total</th>
+      <th>Enrolled_total</th>
+      <th>Total_price_for_in-state_students_living_on_campus_2013-14</th>
+      <th>Total_price_for_out-of-state_students_living_on_campus_2013-14</th>
+      <th>Control_of_institution</th>
+      <th>Total_enrollment</th>
+      <th>Taux_inscription</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Alabama A &amp; M University</td>
+      <td>6142.0</td>
+      <td>5521.0</td>
+      <td>1104.0</td>
+      <td>21849.0</td>
+      <td>27441.0</td>
+      <td>Public</td>
+      <td>5020.0</td>
+      <td>20.00</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>University of Alabama at Birmingham</td>
+      <td>5689.0</td>
+      <td>4934.0</td>
+      <td>1773.0</td>
+      <td>22495.0</td>
+      <td>31687.0</td>
+      <td>Public</td>
+      <td>18568.0</td>
+      <td>35.93</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>University of Alabama in Huntsville</td>
+      <td>2054.0</td>
+      <td>1656.0</td>
+      <td>651.0</td>
+      <td>23466.0</td>
+      <td>35780.0</td>
+      <td>Public</td>
+      <td>7376.0</td>
+      <td>39.31</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Alabama State University</td>
+      <td>10245.0</td>
+      <td>5251.0</td>
+      <td>1479.0</td>
+      <td>18286.0</td>
+      <td>25222.0</td>
+      <td>Public</td>
+      <td>6075.0</td>
+      <td>28.17</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>The University of Alabama</td>
+      <td>30975.0</td>
+      <td>17515.0</td>
+      <td>6454.0</td>
+      <td>27000.0</td>
+      <td>41500.0</td>
+      <td>Public</td>
+      <td>34752.0</td>
+      <td>36.85</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>1515</th>
+      <td>Johnson &amp; Wales University-Charlotte</td>
+      <td>4543.0</td>
+      <td>2708.0</td>
+      <td>613.0</td>
+      <td>41663.0</td>
+      <td>41663.0</td>
+      <td>Private not-for-profit</td>
+      <td>2325.0</td>
+      <td>22.64</td>
+    </tr>
+    <tr>
+      <th>1516</th>
+      <td>Ave Maria University</td>
+      <td>1611.0</td>
+      <td>960.0</td>
+      <td>254.0</td>
+      <td>36860.0</td>
+      <td>36860.0</td>
+      <td>Private not-for-profit</td>
+      <td>988.0</td>
+      <td>26.46</td>
+    </tr>
+    <tr>
+      <th>1525</th>
+      <td>University of South Florida-St Petersburg</td>
+      <td>3195.0</td>
+      <td>1406.0</td>
+      <td>562.0</td>
+      <td>20170.0</td>
+      <td>31086.0</td>
+      <td>Public</td>
+      <td>4660.0</td>
+      <td>39.97</td>
+    </tr>
+    <tr>
+      <th>1530</th>
+      <td>The Kingâ€™s College</td>
+      <td>3033.0</td>
+      <td>2158.0</td>
+      <td>127.0</td>
+      <td>48717.0</td>
+      <td>48717.0</td>
+      <td>Private not-for-profit</td>
+      <td>516.0</td>
+      <td>5.89</td>
+    </tr>
+    <tr>
+      <th>1532</th>
+      <td>Providence Christian College</td>
+      <td>122.0</td>
+      <td>65.0</td>
+      <td>20.0</td>
+      <td>38602.0</td>
+      <td>38602.0</td>
+      <td>Private not-for-profit</td>
+      <td>66.0</td>
+      <td>30.77</td>
+    </tr>
+  </tbody>
+</table>
+<p>1326 rows × 9 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#il est préferable de travailler sur les taux que sur les nombres car les nombre peuvent fausser une conclusion</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#représentons graphiquement le  croisement du taux d&#39;inscription et le nombre d&#39;admission</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">Admissions_total</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">Taux_inscription</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Nombre d&#39;admissions&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Taux d&#39;inscription&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;croisement des admission et le taux des inscriptions&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;croisement des admission et le taux des inscriptions&#39;)
+</pre></div>
+</div>
+<img alt="_images/9cbe87f713883a487a7290ea29c638a51daeafe21a60a32102a2f4f49ce23564.png" src="_images/9cbe87f713883a487a7290ea29c638a51daeafe21a60a32102a2f4f49ce23564.png" />
+</div>
+</div>
+<p>si on devait projeter une coubre elle serait decroissante , alors on peut se dire que</p>
+<p>que plus le taux d’insciption est élevé, et moins il y a d’admission</p>
+<p>et quand le nombre d’admission augmente le taux d’inscription diminue</p>
+<p>les université qui ont un nombre d’admission moins élevés sont cellle qui enregiste le plus fort taux  d’inscription</p>
+<p>un grand nombre d’admission ne signifit pas qu’une université est préféré par les étudiants</p>
+<p>Question5: les étudiants préférent-ils les universités public ou privées</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">Control_of_institution</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">Applicants_total</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Moyenne de candidature selon le type d&#39;université(public/privé)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;type d&#39;université&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Nombre de candidature&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Nombre de candidature&#39;)
+</pre></div>
+</div>
+<img alt="_images/1b6801ea6bd253c35146d8fa7ed6efd925c5a140f877bf3037a6a558c1542c7e.png" src="_images/1b6801ea6bd253c35146d8fa7ed6efd925c5a140f877bf3037a6a558c1542c7e.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#la moyenne des candidature pour le public est pratiquement le double de celui des établissement privé</span>
+<span class="c1">#ça peut etre expliqué par plusiseurs variable ,comme le cout , les formation etc</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>croisement du nombre de candidature et du nombre d’université (selon type public ou privé)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#on va subdiviser notre ensemble de données data,en deux dataframe, l&#39;une pour le public et l&#39;autre pour le priver</span>
+<span class="n">data_univ_prive</span><span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="o">.</span><span class="n">Control_of_institution</span> <span class="o">==</span> <span class="s2">&quot;Private not-for-profit&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_univ_prive</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="c1">#on a bien que des université privé</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Name</th>
+      <th>Applicants_total</th>
+      <th>Admissions_total</th>
+      <th>Enrolled_total</th>
+      <th>Total_price_for_in-state_students_living_on_campus_2013-14</th>
+      <th>Total_price_for_out-of-state_students_living_on_campus_2013-14</th>
+      <th>Control_of_institution</th>
+      <th>Total_enrollment</th>
+      <th>Taux_inscription</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>9</th>
+      <td>Birmingham Southern College</td>
+      <td>1931.0</td>
+      <td>1240.0</td>
+      <td>356.0</td>
+      <td>45470.0</td>
+      <td>45470.0</td>
+      <td>Private not-for-profit</td>
+      <td>1188.0</td>
+      <td>28.71</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Huntingdon College</td>
+      <td>1470.0</td>
+      <td>923.0</td>
+      <td>261.0</td>
+      <td>33885.0</td>
+      <td>33885.0</td>
+      <td>Private not-for-profit</td>
+      <td>1110.0</td>
+      <td>28.28</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>Judson College</td>
+      <td>268.0</td>
+      <td>198.0</td>
+      <td>68.0</td>
+      <td>28840.0</td>
+      <td>28840.0</td>
+      <td>Private not-for-profit</td>
+      <td>347.0</td>
+      <td>34.34</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>University of Mobile</td>
+      <td>866.0</td>
+      <td>617.0</td>
+      <td>259.0</td>
+      <td>32570.0</td>
+      <td>32570.0</td>
+      <td>Private not-for-profit</td>
+      <td>1610.0</td>
+      <td>41.98</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>Oakwood University</td>
+      <td>2728.0</td>
+      <td>937.0</td>
+      <td>409.0</td>
+      <td>36295.0</td>
+      <td>36295.0</td>
+      <td>Private not-for-profit</td>
+      <td>1903.0</td>
+      <td>43.65</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_univ_public</span><span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="o">.</span><span class="n">Control_of_institution</span> <span class="o">==</span> <span class="s2">&quot;Public&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_univ_public</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="c1">#on a bien que des université public</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Name</th>
+      <th>Applicants_total</th>
+      <th>Admissions_total</th>
+      <th>Enrolled_total</th>
+      <th>Total_price_for_in-state_students_living_on_campus_2013-14</th>
+      <th>Total_price_for_out-of-state_students_living_on_campus_2013-14</th>
+      <th>Control_of_institution</th>
+      <th>Total_enrollment</th>
+      <th>Taux_inscription</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Alabama A &amp; M University</td>
+      <td>6142.0</td>
+      <td>5521.0</td>
+      <td>1104.0</td>
+      <td>21849.0</td>
+      <td>27441.0</td>
+      <td>Public</td>
+      <td>5020.0</td>
+      <td>20.00</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>University of Alabama at Birmingham</td>
+      <td>5689.0</td>
+      <td>4934.0</td>
+      <td>1773.0</td>
+      <td>22495.0</td>
+      <td>31687.0</td>
+      <td>Public</td>
+      <td>18568.0</td>
+      <td>35.93</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>University of Alabama in Huntsville</td>
+      <td>2054.0</td>
+      <td>1656.0</td>
+      <td>651.0</td>
+      <td>23466.0</td>
+      <td>35780.0</td>
+      <td>Public</td>
+      <td>7376.0</td>
+      <td>39.31</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Alabama State University</td>
+      <td>10245.0</td>
+      <td>5251.0</td>
+      <td>1479.0</td>
+      <td>18286.0</td>
+      <td>25222.0</td>
+      <td>Public</td>
+      <td>6075.0</td>
+      <td>28.17</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>The University of Alabama</td>
+      <td>30975.0</td>
+      <td>17515.0</td>
+      <td>6454.0</td>
+      <td>27000.0</td>
+      <td>41500.0</td>
+      <td>Public</td>
+      <td>34752.0</td>
+      <td>36.85</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">([</span><span class="n">data_univ_public</span><span class="o">.</span><span class="n">Applicants_total</span><span class="p">,</span><span class="n">data_univ_prive</span><span class="o">.</span><span class="n">Applicants_total</span><span class="p">],</span> <span class="n">bins</span> <span class="o">=</span> <span class="mi">25</span><span class="p">,</span> <span class="n">stacked</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Nombre de candidature par université public ou privé&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Nombre de candidature&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Nombre des université&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="s1">&#39;Universités publiques. (</span><span class="si">{}</span><span class="s1">) &#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data_univ_public</span><span class="p">)),</span>
+           <span class="s2">&quot;Universités privé.(</span><span class="si">{}</span><span class="s2">) &quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data_univ_prive</span><span class="p">))])</span>
+           
+           
+<span class="c1">#stacked = True pour le graphique empilée</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x27072714610&gt;
+</pre></div>
+</div>
+<img alt="_images/ccfe53942d328364239615c1b73257805f33bd258e2e38799c692c3fdea61181.png" src="_images/ccfe53942d328364239615c1b73257805f33bd258e2e38799c692c3fdea61181.png" />
+</div>
+</div>
+<p>on constate que l’on a plus d’duniversité privé(850) que d’université public(476)
+les université qui reçoivent moins de 5k candidature sont majoritairement privé</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

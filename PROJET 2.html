@@ -1,0 +1,2395 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>PROJET ANALYSE DES VENTES &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'PROJET 2';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="PROJET NETFLIX" href="PROJET%203.html" />
+    <link rel="prev" title="Bienvenue dans mon portfolio de Data Science !" href="intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">My sample book</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Bienvenue dans mon portfolio de Data Science !
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">PROJET ANALYSE DES VENTES</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PROJET%203.html">PROJET NETFLIX</a></li>
+
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FPROJET 2.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/PROJET 2.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>PROJET ANALYSE DES VENTES</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="projet-analyse-des-ventes">
+<h1>PROJET ANALYSE DES VENTES<a class="headerlink" href="#projet-analyse-des-ventes" title="Permalink to this heading">#</a></h1>
+<p>Problématique</p>
+<p>Chaque fichier contient les colonnes suivantes:</p>
+<ul class="simple">
+<li><p>OrderID: l’identifiant unique de la commande</p></li>
+<li><p>Product: La désignation du produit</p></li>
+<li><p>Quantity Ordered: la quantité vendue</p></li>
+<li><p>Price each: le prix unitaire</p></li>
+<li><p>order date : La date d’achat</p></li>
+<li><p>Purchase adress: l’adresse de la boutique de vente</p></li>
+</ul>
+<p>Nous allons analyser ces données pour répondre aux questions suivantes:</p>
+<ul class="simple">
+<li><p>Quel est le meilleur mois de vente ? et Quel est le chiffre d’affaires de ce mois ?</p></li>
+<li><p>Dans quelle ville a-t-on le plus vendu de produits ?</p></li>
+<li><p>A quelle heure devons-nous passer de la publicité pour augmenter nos ventes ?</p></li>
+<li><p>Quels sont les produits qui sont souvent achetés ensemble ?</p></li>
+<li><p>Quel produit a-t-on le plus vendu et pourquoi ?</p></li>
+</ul>
+<p>Nous allons accompagner nos solutions de visualisations pertinentes afin d’aider le business à améliorer ses chiffres de l’année suivante.</p>
+<p>Import des packages</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;all_data.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 186850 entries, 0 to 186849
+Data columns (total 6 columns):
+ #   Column            Non-Null Count   Dtype 
+---  ------            --------------   ----- 
+ 0   Order ID          186305 non-null  object
+ 1   Product           186305 non-null  object
+ 2   Quantity Ordered  186305 non-null  object
+ 3   Price Each        186305 non-null  object
+ 4   Order Date        186305 non-null  object
+ 5   Purchase Address  186305 non-null  object
+dtypes: object(6)
+memory usage: 8.6+ MB
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Order ID</th>
+      <th>Product</th>
+      <th>Quantity Ordered</th>
+      <th>Price Each</th>
+      <th>Order Date</th>
+      <th>Purchase Address</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>176558</td>
+      <td>USB-C Charging Cable</td>
+      <td>2</td>
+      <td>11.95</td>
+      <td>04/19/19 08:46</td>
+      <td>917 1st St, Dallas, TX 75001</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>176559</td>
+      <td>Bose SoundSport Headphones</td>
+      <td>1</td>
+      <td>99.99</td>
+      <td>04/07/19 22:30</td>
+      <td>682 Chestnut St, Boston, MA 02215</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>176560</td>
+      <td>Google Phone</td>
+      <td>1</td>
+      <td>600</td>
+      <td>04/12/19 14:38</td>
+      <td>669 Spruce St, Los Angeles, CA 90001</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>176560</td>
+      <td>Wired Headphones</td>
+      <td>1</td>
+      <td>11.99</td>
+      <td>04/12/19 14:38</td>
+      <td>669 Spruce St, Los Angeles, CA 90001</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Order ID</th>
+      <th>Product</th>
+      <th>Quantity Ordered</th>
+      <th>Price Each</th>
+      <th>Order Date</th>
+      <th>Purchase Address</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>186845</th>
+      <td>259353</td>
+      <td>AAA Batteries (4-pack)</td>
+      <td>3</td>
+      <td>2.99</td>
+      <td>09/17/19 20:56</td>
+      <td>840 Highland St, Los Angeles, CA 90001</td>
+    </tr>
+    <tr>
+      <th>186846</th>
+      <td>259354</td>
+      <td>iPhone</td>
+      <td>1</td>
+      <td>700</td>
+      <td>09/01/19 16:00</td>
+      <td>216 Dogwood St, San Francisco, CA 94016</td>
+    </tr>
+    <tr>
+      <th>186847</th>
+      <td>259355</td>
+      <td>iPhone</td>
+      <td>1</td>
+      <td>700</td>
+      <td>09/23/19 07:39</td>
+      <td>220 12th St, San Francisco, CA 94016</td>
+    </tr>
+    <tr>
+      <th>186848</th>
+      <td>259356</td>
+      <td>34in Ultrawide Monitor</td>
+      <td>1</td>
+      <td>379.99</td>
+      <td>09/19/19 17:30</td>
+      <td>511 Forest St, San Francisco, CA 94016</td>
+    </tr>
+    <tr>
+      <th>186849</th>
+      <td>259357</td>
+      <td>USB-C Charging Cable</td>
+      <td>1</td>
+      <td>11.95</td>
+      <td>09/30/19 00:18</td>
+      <td>250 Meadow St, San Francisco, CA 94016</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Nettoyage</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Order ID            545
+Product             545
+Quantity Ordered    545
+Price Each          545
+Order Date          545
+Purchase Address    545
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#le pourecentage des valeurs manquantes</span>
+<span class="n">missing_value</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">percent</span> <span class="o">=</span> <span class="p">(</span><span class="n">missing_value</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">missing_table</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;valeurs manquantes&#39;</span><span class="p">:</span> <span class="n">missing_value</span><span class="p">,</span> <span class="s1">&#39;pourcentage&#39;</span><span class="p">:</span> <span class="n">percent</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">missing_table</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>valeurs manquantes</th>
+      <th>pourcentage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Order ID</th>
+      <td>545</td>
+      <td>0.291678</td>
+    </tr>
+    <tr>
+      <th>Product</th>
+      <td>545</td>
+      <td>0.291678</td>
+    </tr>
+    <tr>
+      <th>Quantity Ordered</th>
+      <td>545</td>
+      <td>0.291678</td>
+    </tr>
+    <tr>
+      <th>Price Each</th>
+      <td>545</td>
+      <td>0.291678</td>
+    </tr>
+    <tr>
+      <th>Order Date</th>
+      <td>545</td>
+      <td>0.291678</td>
+    </tr>
+    <tr>
+      <th>Purchase Address</th>
+      <td>545</td>
+      <td>0.291678</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">how</span><span class="o">=</span><span class="s1">&#39;all&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Order ID            0
+Product             0
+Quantity Ordered    0
+Price Each          0
+Order Date          0
+Purchase Address    0
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">duplicated</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>618
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Order ID&#39;</span><span class="p">,</span><span class="s1">&#39;Product&#39;</span><span class="p">,</span><span class="s1">&#39;Quantity Ordered&#39;</span><span class="p">,</span><span class="s1">&#39;Price Each&#39;</span><span class="p">,</span><span class="s1">&#39;Order Date&#39;</span><span class="p">,</span><span class="s1">&#39;Purchase Address&#39;</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">duplicated</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+</pre></div>
+</div>
+</div>
+</div>
+<p>statistique descriptive</p>
+<p>Quel est le mois durant lequel nous avons réalisé le plus gros chiffre d’affaire ?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Order ID</th>
+      <th>Product</th>
+      <th>Quantity Ordered</th>
+      <th>Price Each</th>
+      <th>Order Date</th>
+      <th>Purchase Address</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>176558</td>
+      <td>USB-C Charging Cable</td>
+      <td>2</td>
+      <td>11.95</td>
+      <td>04/19/19 08:46</td>
+      <td>917 1st St, Dallas, TX 75001</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>176559</td>
+      <td>Bose SoundSport Headphones</td>
+      <td>1</td>
+      <td>99.99</td>
+      <td>04/07/19 22:30</td>
+      <td>682 Chestnut St, Boston, MA 02215</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>176560</td>
+      <td>Google Phone</td>
+      <td>1</td>
+      <td>600</td>
+      <td>04/12/19 14:38</td>
+      <td>669 Spruce St, Los Angeles, CA 90001</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>176560</td>
+      <td>Wired Headphones</td>
+      <td>1</td>
+      <td>11.99</td>
+      <td>04/12/19 14:38</td>
+      <td>669 Spruce St, Los Angeles, CA 90001</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>176561</td>
+      <td>Wired Headphones</td>
+      <td>1</td>
+      <td>11.99</td>
+      <td>04/30/19 09:27</td>
+      <td>333 8th St, Los Angeles, CA 90001</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#nous devons extraire le mois dans un premier temps, alors on va faire une split</span>
+<span class="k">def</span> <span class="nf">Month</span><span class="p">(</span><span class="n">nom_colonne</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">nom_colonne</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#rajoutons une colonne de mois </span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;Month&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Order Date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">Month</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Order ID</th>
+      <th>Product</th>
+      <th>Quantity Ordered</th>
+      <th>Price Each</th>
+      <th>Order Date</th>
+      <th>Purchase Address</th>
+      <th>Month</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>176558</td>
+      <td>USB-C Charging Cable</td>
+      <td>2</td>
+      <td>11.95</td>
+      <td>04/19/19 08:46</td>
+      <td>917 1st St, Dallas, TX 75001</td>
+      <td>04</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>176559</td>
+      <td>Bose SoundSport Headphones</td>
+      <td>1</td>
+      <td>99.99</td>
+      <td>04/07/19 22:30</td>
+      <td>682 Chestnut St, Boston, MA 02215</td>
+      <td>04</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>176560</td>
+      <td>Google Phone</td>
+      <td>1</td>
+      <td>600</td>
+      <td>04/12/19 14:38</td>
+      <td>669 Spruce St, Los Angeles, CA 90001</td>
+      <td>04</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>176560</td>
+      <td>Wired Headphones</td>
+      <td>1</td>
+      <td>11.99</td>
+      <td>04/12/19 14:38</td>
+      <td>669 Spruce St, Los Angeles, CA 90001</td>
+      <td>04</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>176561</td>
+      <td>Wired Headphones</td>
+      <td>1</td>
+      <td>11.99</td>
+      <td>04/30/19 09:27</td>
+      <td>333 8th St, Los Angeles, CA 90001</td>
+      <td>04</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#on constate qu&#39;il ya un élément étrangé</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;Month&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;04&#39;, &#39;05&#39;, &#39;Order Date&#39;, &#39;08&#39;, &#39;09&#39;, &#39;12&#39;, &#39;01&#39;, &#39;02&#39;, &#39;03&#39;, &#39;07&#39;,
+       &#39;06&#39;, &#39;11&#39;, &#39;10&#39;], dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Month&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;Order Date&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Month&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;04&#39;, &#39;05&#39;, &#39;08&#39;, &#39;09&#39;, &#39;12&#39;, &#39;01&#39;, &#39;02&#39;, &#39;03&#39;, &#39;07&#39;, &#39;06&#39;, &#39;11&#39;,
+       &#39;10&#39;], dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Convertissons le mois en entier</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;Month&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Month&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">dtypes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Order ID            object
+Product             object
+Quantity Ordered    object
+Price Each          object
+Order Date          object
+Purchase Address    object
+Month                int32
+dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#maintenant nous devons obtenir le chiffre d&#39;affaire, dans la base on dispose de la quantité et du prix unitaire</span>
+<span class="c1">#alors nous allons multiplier la quantité par le prix unitaire, mais cette opération ne peut se faire sur des colonnes </span>
+<span class="c1">#de type object</span>
+<span class="c1">#le prix sera converti en float et la quantitée en entier</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Price Each&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Price Each&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Quantity Ordered&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Quantity Ordered&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">dtypes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Order ID             object
+Product              object
+Quantity Ordered      int32
+Price Each          float64
+Order Date           object
+Purchase Address     object
+Month                 int32
+dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#créons un colonne vente pour obtenir le total des ventes de chaque produit</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;sales&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Price Each&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Quantity Ordered&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Order ID</th>
+      <th>Product</th>
+      <th>Quantity Ordered</th>
+      <th>Price Each</th>
+      <th>Order Date</th>
+      <th>Purchase Address</th>
+      <th>Month</th>
+      <th>sales</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>176558</td>
+      <td>USB-C Charging Cable</td>
+      <td>2</td>
+      <td>11.95</td>
+      <td>04/19/19 08:46</td>
+      <td>917 1st St, Dallas, TX 75001</td>
+      <td>4</td>
+      <td>23.90</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>176559</td>
+      <td>Bose SoundSport Headphones</td>
+      <td>1</td>
+      <td>99.99</td>
+      <td>04/07/19 22:30</td>
+      <td>682 Chestnut St, Boston, MA 02215</td>
+      <td>4</td>
+      <td>99.99</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>176560</td>
+      <td>Google Phone</td>
+      <td>1</td>
+      <td>600.00</td>
+      <td>04/12/19 14:38</td>
+      <td>669 Spruce St, Los Angeles, CA 90001</td>
+      <td>4</td>
+      <td>600.00</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>176560</td>
+      <td>Wired Headphones</td>
+      <td>1</td>
+      <td>11.99</td>
+      <td>04/12/19 14:38</td>
+      <td>669 Spruce St, Los Angeles, CA 90001</td>
+      <td>4</td>
+      <td>11.99</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>176561</td>
+      <td>Wired Headphones</td>
+      <td>1</td>
+      <td>11.99</td>
+      <td>04/30/19 09:27</td>
+      <td>333 8th St, Los Angeles, CA 90001</td>
+      <td>4</td>
+      <td>11.99</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#maintenant on peut identifier le mois avec le meilleure chiffre d&#39;affaire avec un groupby</span>
+<span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Month&#39;</span><span class="p">)[</span><span class="s2">&quot;sales&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Month
+12    4608295.70
+10    3734777.86
+4     3389217.98
+11    3197875.05
+5     3150616.23
+3     2804973.35
+7     2646461.32
+6     2576280.15
+8     2241083.37
+2     2200078.08
+9     2094465.69
+1     1821413.16
+Name: sales, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">months</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">13</span><span class="p">)</span><span class="c1"># les 12 premiere valeurs</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">months</span><span class="p">,</span><span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Month&#39;</span><span class="p">)[</span><span class="s1">&#39;sales&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Months&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;sales&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;chiffre d&#39;affaire par mois&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &quot;chiffre d&#39;affaire par mois&quot;)
+</pre></div>
+</div>
+<img alt="_images/27c41d63aa59e9833429de38909f7ae2ae78b7c30f78d77a60d05b9de86b2174.png" src="_images/27c41d63aa59e9833429de38909f7ae2ae78b7c30f78d77a60d05b9de86b2174.png" />
+</div>
+</div>
+<p>Le mois de décembre est le mois où il y eu le plus de vente ce qui peut s’expliquer car c’est un mois de fête</p>
+<p>Dans quelle ville a-t-on le plus vendu de produits ?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Order ID</th>
+      <th>Product</th>
+      <th>Quantity Ordered</th>
+      <th>Price Each</th>
+      <th>Order Date</th>
+      <th>Purchase Address</th>
+      <th>Month</th>
+      <th>sales</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>176558</td>
+      <td>USB-C Charging Cable</td>
+      <td>2</td>
+      <td>11.95</td>
+      <td>04/19/19 08:46</td>
+      <td>917 1st St, Dallas, TX 75001</td>
+      <td>4</td>
+      <td>23.90</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>176559</td>
+      <td>Bose SoundSport Headphones</td>
+      <td>1</td>
+      <td>99.99</td>
+      <td>04/07/19 22:30</td>
+      <td>682 Chestnut St, Boston, MA 02215</td>
+      <td>4</td>
+      <td>99.99</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>176560</td>
+      <td>Google Phone</td>
+      <td>1</td>
+      <td>600.00</td>
+      <td>04/12/19 14:38</td>
+      <td>669 Spruce St, Los Angeles, CA 90001</td>
+      <td>4</td>
+      <td>600.00</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>176560</td>
+      <td>Wired Headphones</td>
+      <td>1</td>
+      <td>11.99</td>
+      <td>04/12/19 14:38</td>
+      <td>669 Spruce St, Los Angeles, CA 90001</td>
+      <td>4</td>
+      <td>11.99</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>176561</td>
+      <td>Wired Headphones</td>
+      <td>1</td>
+      <td>11.99</td>
+      <td>04/30/19 09:27</td>
+      <td>333 8th St, Los Angeles, CA 90001</td>
+      <td>4</td>
+      <td>11.99</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#nous devons extraire le mois dans un premier temps, alors on va faire une split</span>
+<span class="k">def</span> <span class="nf">City</span><span class="p">(</span><span class="n">nom_colonne</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">nom_colonne</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#rajoutons une colonne de ville</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;city&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Purchase Address&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">City</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;city&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39; Dallas&#39;, &#39; Boston&#39;, &#39; Los Angeles&#39;, &#39; San Francisco&#39;, &#39; Seattle&#39;,
+       &#39; Atlanta&#39;, &#39; New York City&#39;, &#39; Portland&#39;, &#39; Austin&#39;], dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Order ID</th>
+      <th>Product</th>
+      <th>Quantity Ordered</th>
+      <th>Price Each</th>
+      <th>Order Date</th>
+      <th>Purchase Address</th>
+      <th>Month</th>
+      <th>sales</th>
+      <th>city</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>176558</td>
+      <td>USB-C Charging Cable</td>
+      <td>2</td>
+      <td>11.95</td>
+      <td>04/19/19 08:46</td>
+      <td>917 1st St, Dallas, TX 75001</td>
+      <td>4</td>
+      <td>23.90</td>
+      <td>Dallas</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>176559</td>
+      <td>Bose SoundSport Headphones</td>
+      <td>1</td>
+      <td>99.99</td>
+      <td>04/07/19 22:30</td>
+      <td>682 Chestnut St, Boston, MA 02215</td>
+      <td>4</td>
+      <td>99.99</td>
+      <td>Boston</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>176560</td>
+      <td>Google Phone</td>
+      <td>1</td>
+      <td>600.00</td>
+      <td>04/12/19 14:38</td>
+      <td>669 Spruce St, Los Angeles, CA 90001</td>
+      <td>4</td>
+      <td>600.00</td>
+      <td>Los Angeles</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>176560</td>
+      <td>Wired Headphones</td>
+      <td>1</td>
+      <td>11.99</td>
+      <td>04/12/19 14:38</td>
+      <td>669 Spruce St, Los Angeles, CA 90001</td>
+      <td>4</td>
+      <td>11.99</td>
+      <td>Los Angeles</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>176561</td>
+      <td>Wired Headphones</td>
+      <td>1</td>
+      <td>11.99</td>
+      <td>04/30/19 09:27</td>
+      <td>333 8th St, Los Angeles, CA 90001</td>
+      <td>4</td>
+      <td>11.99</td>
+      <td>Los Angeles</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#maintenant on peut identifier les meilleures ville par commande</span>
+<span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;city&#39;</span><span class="p">)[</span><span class="s2">&quot;city&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>city
+ San Francisco    44662
+ Los Angeles      29564
+ New York City    24847
+ Boston           19901
+ Atlanta          14863
+ Dallas           14797
+ Seattle          14713
+ Portland         12449
+ Austin            9890
+Name: city, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;city&#39;</span><span class="p">)[</span><span class="s2">&quot;city&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">index</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39; Atlanta&#39;, &#39; Austin&#39;, &#39; Boston&#39;, &#39; Dallas&#39;, &#39; Los Angeles&#39;,
+       &#39; New York City&#39;, &#39; Portland&#39;, &#39; San Francisco&#39;, &#39; Seattle&#39;],
+      dtype=&#39;object&#39;, name=&#39;city&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;city&#39;</span><span class="p">)[</span><span class="s2">&quot;city&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">values</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([14863,  9890, 19901, 14797, 29564, 24847, 12449, 44662, 14713],
+      dtype=int64)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;city&#39;</span><span class="p">)[</span><span class="s2">&quot;city&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">index</span><span class="p">,</span><span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;city&#39;</span><span class="p">)[</span><span class="s2">&quot;city&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;city&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;commandes&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;chiffre d&#39;affaire par mois&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &quot;chiffre d&#39;affaire par mois&quot;)
+</pre></div>
+</div>
+<img alt="_images/b3b641a21d9e7491df8332f4e146f8540760d602616667f93b08248edcdaf08f.png" src="_images/b3b641a21d9e7491df8332f4e146f8540760d602616667f93b08248edcdaf08f.png" />
+</div>
+</div>
+<p>La ville qui vend le plus de produit est San Francisco</p>
+<p>A quelle heure devons-nous passer de la publicité pour augmenter nos ventes ?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Order ID</th>
+      <th>Product</th>
+      <th>Quantity Ordered</th>
+      <th>Price Each</th>
+      <th>Order Date</th>
+      <th>Purchase Address</th>
+      <th>Month</th>
+      <th>sales</th>
+      <th>city</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>176558</td>
+      <td>USB-C Charging Cable</td>
+      <td>2</td>
+      <td>11.95</td>
+      <td>04/19/19 08:46</td>
+      <td>917 1st St, Dallas, TX 75001</td>
+      <td>4</td>
+      <td>23.90</td>
+      <td>Dallas</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>176559</td>
+      <td>Bose SoundSport Headphones</td>
+      <td>1</td>
+      <td>99.99</td>
+      <td>04/07/19 22:30</td>
+      <td>682 Chestnut St, Boston, MA 02215</td>
+      <td>4</td>
+      <td>99.99</td>
+      <td>Boston</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>176560</td>
+      <td>Google Phone</td>
+      <td>1</td>
+      <td>600.00</td>
+      <td>04/12/19 14:38</td>
+      <td>669 Spruce St, Los Angeles, CA 90001</td>
+      <td>4</td>
+      <td>600.00</td>
+      <td>Los Angeles</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>176560</td>
+      <td>Wired Headphones</td>
+      <td>1</td>
+      <td>11.99</td>
+      <td>04/12/19 14:38</td>
+      <td>669 Spruce St, Los Angeles, CA 90001</td>
+      <td>4</td>
+      <td>11.99</td>
+      <td>Los Angeles</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>176561</td>
+      <td>Wired Headphones</td>
+      <td>1</td>
+      <td>11.99</td>
+      <td>04/30/19 09:27</td>
+      <td>333 8th St, Los Angeles, CA 90001</td>
+      <td>4</td>
+      <td>11.99</td>
+      <td>Los Angeles</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#on va cette fois extraire la date avec datetime</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;Hour&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Order Date&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">hour</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Order ID</th>
+      <th>Product</th>
+      <th>Quantity Ordered</th>
+      <th>Price Each</th>
+      <th>Order Date</th>
+      <th>Purchase Address</th>
+      <th>Month</th>
+      <th>sales</th>
+      <th>city</th>
+      <th>Hour</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>176558</td>
+      <td>USB-C Charging Cable</td>
+      <td>2</td>
+      <td>11.95</td>
+      <td>04/19/19 08:46</td>
+      <td>917 1st St, Dallas, TX 75001</td>
+      <td>4</td>
+      <td>23.90</td>
+      <td>Dallas</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>176559</td>
+      <td>Bose SoundSport Headphones</td>
+      <td>1</td>
+      <td>99.99</td>
+      <td>04/07/19 22:30</td>
+      <td>682 Chestnut St, Boston, MA 02215</td>
+      <td>4</td>
+      <td>99.99</td>
+      <td>Boston</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>176560</td>
+      <td>Google Phone</td>
+      <td>1</td>
+      <td>600.00</td>
+      <td>04/12/19 14:38</td>
+      <td>669 Spruce St, Los Angeles, CA 90001</td>
+      <td>4</td>
+      <td>600.00</td>
+      <td>Los Angeles</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>176560</td>
+      <td>Wired Headphones</td>
+      <td>1</td>
+      <td>11.99</td>
+      <td>04/12/19 14:38</td>
+      <td>669 Spruce St, Los Angeles, CA 90001</td>
+      <td>4</td>
+      <td>11.99</td>
+      <td>Los Angeles</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>176561</td>
+      <td>Wired Headphones</td>
+      <td>1</td>
+      <td>11.99</td>
+      <td>04/30/19 09:27</td>
+      <td>333 8th St, Los Angeles, CA 90001</td>
+      <td>4</td>
+      <td>11.99</td>
+      <td>Los Angeles</td>
+      <td>9</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">keys</span> <span class="o">=</span><span class="p">[]</span>
+<span class="n">hours</span> <span class="o">=</span><span class="p">[]</span>
+<span class="k">for</span> <span class="n">key</span><span class="p">,</span><span class="n">hour</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Hour&#39;</span><span class="p">):</span>
+    <span class="n">keys</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+    <span class="n">hours</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">hour</span><span class="p">))</span>
+    
+<span class="n">hours</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[3902,
+ 2347,
+ 1242,
+ 830,
+ 852,
+ 1320,
+ 2481,
+ 4002,
+ 6252,
+ 8740,
+ 10929,
+ 12392,
+ 12573,
+ 12115,
+ 10965,
+ 10159,
+ 10359,
+ 10884,
+ 12263,
+ 12886,
+ 12218,
+ 10905,
+ 8808,
+ 6262]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">keys</span><span class="p">,</span><span class="n">hours</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;heure de  commande&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;nombre de commande&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;nombre de commande&#39;)
+</pre></div>
+</div>
+<img alt="_images/bfdaab7a89f38fbbc27d1782d2ddd9e40ccc3b6062753a1c2c514bf512353253.png" src="_images/bfdaab7a89f38fbbc27d1782d2ddd9e40ccc3b6062753a1c2c514bf512353253.png" />
+</div>
+</div>
+<p>Le bon moment pour une publicité est entre 12h et 19h</p>
+<p>Quel produit a-t-on le plus vendu et pourquoi ?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#on va faire une regroupement des produit par quantité commandée</span>
+<span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Product&#39;</span><span class="p">)[</span><span class="s1">&#39;Quantity Ordered&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Product
+AAA Batteries (4-pack)        30986
+AA Batteries (4-pack)         27615
+USB-C Charging Cable          23931
+Lightning Charging Cable      23169
+Wired Headphones              20524
+Apple Airpods Headphones      15637
+Bose SoundSport Headphones    13430
+27in FHD Monitor               7541
+iPhone                         6847
+27in 4K Gaming Monitor         6239
+34in Ultrawide Monitor         6192
+Google Phone                   5529
+Flatscreen TV                  4813
+Macbook Pro Laptop             4725
+ThinkPad Laptop                4128
+20in Monitor                   4126
+Vareebadd Phone                2068
+LG Washing Machine              666
+LG Dryer                        646
+Name: Quantity Ordered, dtype: int32
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Product&#39;</span><span class="p">)[</span><span class="s1">&#39;Quantity Ordered&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39;Product&#39;&gt;
+</pre></div>
+</div>
+<img alt="_images/9d113681c2b9a301b861bc2266086d124afae3ca9c07ef7d8dff4035081651f3.png" src="_images/9d113681c2b9a301b861bc2266086d124afae3ca9c07ef7d8dff4035081651f3.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#on va faire une regroupement des produit par prix pour comprendre l&#39;impact du prix sur les ventes des produits</span>
+<span class="c1">#on prendra le prix moyen car il peut y avoir des promotions également</span>
+<span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Product&#39;</span><span class="p">)[</span><span class="s1">&#39;Price Each&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Product
+Macbook Pro Laptop            1700.00
+ThinkPad Laptop                999.99
+iPhone                         700.00
+LG Dryer                       600.00
+LG Washing Machine             600.00
+Google Phone                   600.00
+Vareebadd Phone                400.00
+27in 4K Gaming Monitor         389.99
+34in Ultrawide Monitor         379.99
+Flatscreen TV                  300.00
+Apple Airpods Headphones       150.00
+27in FHD Monitor               149.99
+20in Monitor                   109.99
+Bose SoundSport Headphones      99.99
+Lightning Charging Cable        14.95
+Wired Headphones                11.99
+USB-C Charging Cable            11.95
+AA Batteries (4-pack)            3.84
+AAA Batteries (4-pack)           2.99
+Name: Price Each, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Product&#39;</span><span class="p">)[</span><span class="s1">&#39;Price Each&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39;Product&#39;&gt;
+</pre></div>
+</div>
+<img alt="_images/1c81ea7196bfebc7f2a2690b63ca8464af853133807625acad32f9b3ac8c7d64.png" src="_images/1c81ea7196bfebc7f2a2690b63ca8464af853133807625acad32f9b3ac8c7d64.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#fesont un graphique pour combiner </span>
+<span class="n">products</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Product&#39;</span><span class="p">)[</span><span class="s1">&#39;Quantity Ordered&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">index</span>
+<span class="n">quantity</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Product&#39;</span><span class="p">)[</span><span class="s1">&#39;Quantity Ordered&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">prices</span> <span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Product&#39;</span><span class="p">)[</span><span class="s1">&#39;Price Each&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span><span class="mi">24</span><span class="p">))</span>
+<span class="n">fig</span><span class="p">,</span><span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax2</span><span class="o">=</span><span class="n">ax1</span><span class="o">.</span><span class="n">twinx</span><span class="p">()</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">products</span><span class="p">,</span><span class="n">quantity</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">products</span><span class="p">,</span><span class="n">prices</span><span class="p">,</span><span class="s1">&#39;b-&#39;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">products</span><span class="p">,</span><span class="n">rotation</span><span class="o">=</span><span class="s1">&#39;vertical&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Lenoovo\AppData\Local\Temp\ipykernel_4188\4189391790.py:6: UserWarning: FixedFormatter should only be used together with FixedLocator
+  ax1.set_xticklabels(products,rotation=&#39;vertical&#39;, size=8)
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Text(0, 0, &#39;20in Monitor&#39;),
+ Text(1, 0, &#39;27in 4K Gaming Monitor&#39;),
+ Text(2, 0, &#39;27in FHD Monitor&#39;),
+ Text(3, 0, &#39;34in Ultrawide Monitor&#39;),
+ Text(4, 0, &#39;AA Batteries (4-pack)&#39;),
+ Text(5, 0, &#39;AAA Batteries (4-pack)&#39;),
+ Text(6, 0, &#39;Apple Airpods Headphones&#39;),
+ Text(7, 0, &#39;Bose SoundSport Headphones&#39;),
+ Text(8, 0, &#39;Flatscreen TV&#39;),
+ Text(9, 0, &#39;Google Phone&#39;),
+ Text(10, 0, &#39;LG Dryer&#39;),
+ Text(11, 0, &#39;LG Washing Machine&#39;),
+ Text(12, 0, &#39;Lightning Charging Cable&#39;),
+ Text(13, 0, &#39;Macbook Pro Laptop&#39;),
+ Text(14, 0, &#39;ThinkPad Laptop&#39;),
+ Text(15, 0, &#39;USB-C Charging Cable&#39;),
+ Text(16, 0, &#39;Vareebadd Phone&#39;),
+ Text(17, 0, &#39;Wired Headphones&#39;),
+ Text(18, 0, &#39;iPhone&#39;)]
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 2880x1728 with 0 Axes&gt;
+</pre></div>
+</div>
+<img alt="_images/e2d1b09adeec2bb8a3e8ab18f8ebd5c84c2ad3ac6b752bd5fae7199006543856.png" src="_images/e2d1b09adeec2bb8a3e8ab18f8ebd5c84c2ad3ac6b752bd5fae7199006543856.png" />
+</div>
+</div>
+<p>En vert nous avons les quantités vendues et en bleu le prix moyen, ON constate alors que plus les prix sont haut, et plus les
+quantités vendues sont basses, et inverssement.</p>
+<p>les produis les plus vendus sont les: AAA Batteries (4-pack)</p>
+<p>Quels sont les produits qui sont souvent achetés ensemble ?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Order ID</th>
+      <th>Product</th>
+      <th>Quantity Ordered</th>
+      <th>Price Each</th>
+      <th>Order Date</th>
+      <th>Purchase Address</th>
+      <th>Month</th>
+      <th>sales</th>
+      <th>city</th>
+      <th>Hour</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>176558</td>
+      <td>USB-C Charging Cable</td>
+      <td>2</td>
+      <td>11.95</td>
+      <td>04/19/19 08:46</td>
+      <td>917 1st St, Dallas, TX 75001</td>
+      <td>4</td>
+      <td>23.90</td>
+      <td>Dallas</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>176559</td>
+      <td>Bose SoundSport Headphones</td>
+      <td>1</td>
+      <td>99.99</td>
+      <td>04/07/19 22:30</td>
+      <td>682 Chestnut St, Boston, MA 02215</td>
+      <td>4</td>
+      <td>99.99</td>
+      <td>Boston</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>176560</td>
+      <td>Google Phone</td>
+      <td>1</td>
+      <td>600.00</td>
+      <td>04/12/19 14:38</td>
+      <td>669 Spruce St, Los Angeles, CA 90001</td>
+      <td>4</td>
+      <td>600.00</td>
+      <td>Los Angeles</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>176560</td>
+      <td>Wired Headphones</td>
+      <td>1</td>
+      <td>11.99</td>
+      <td>04/12/19 14:38</td>
+      <td>669 Spruce St, Los Angeles, CA 90001</td>
+      <td>4</td>
+      <td>11.99</td>
+      <td>Los Angeles</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>176561</td>
+      <td>Wired Headphones</td>
+      <td>1</td>
+      <td>11.99</td>
+      <td>04/30/19 09:27</td>
+      <td>333 8th St, Los Angeles, CA 90001</td>
+      <td>4</td>
+      <td>11.99</td>
+      <td>Los Angeles</td>
+      <td>9</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#les éleéments qui ont été achetés lors de la même commande ont le meme id donc on va pas les supprimer</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Order ID&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">duplicated</span><span class="p">(</span><span class="n">keep</span><span class="o">=</span><span class="kc">False</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#on crée une nouvelle colonne pour prendre les combinaisons qui ont été commandés au meme moment</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;Grouped&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Order ID&#39;</span><span class="p">)[</span><span class="s1">&#39;Product&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="s1">&#39;,&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Order ID</th>
+      <th>Product</th>
+      <th>Quantity Ordered</th>
+      <th>Price Each</th>
+      <th>Order Date</th>
+      <th>Purchase Address</th>
+      <th>Month</th>
+      <th>sales</th>
+      <th>city</th>
+      <th>Hour</th>
+      <th>Grouped</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>3</th>
+      <td>176560</td>
+      <td>Google Phone</td>
+      <td>1</td>
+      <td>600.00</td>
+      <td>04/12/19 14:38</td>
+      <td>669 Spruce St, Los Angeles, CA 90001</td>
+      <td>4</td>
+      <td>600.00</td>
+      <td>Los Angeles</td>
+      <td>14</td>
+      <td>Google Phone,Wired Headphones</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>176560</td>
+      <td>Wired Headphones</td>
+      <td>1</td>
+      <td>11.99</td>
+      <td>04/12/19 14:38</td>
+      <td>669 Spruce St, Los Angeles, CA 90001</td>
+      <td>4</td>
+      <td>11.99</td>
+      <td>Los Angeles</td>
+      <td>14</td>
+      <td>Google Phone,Wired Headphones</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>176574</td>
+      <td>Google Phone</td>
+      <td>1</td>
+      <td>600.00</td>
+      <td>04/03/19 19:42</td>
+      <td>20 Hill St, Los Angeles, CA 90001</td>
+      <td>4</td>
+      <td>600.00</td>
+      <td>Los Angeles</td>
+      <td>19</td>
+      <td>Google Phone,USB-C Charging Cable</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>176574</td>
+      <td>USB-C Charging Cable</td>
+      <td>1</td>
+      <td>11.95</td>
+      <td>04/03/19 19:42</td>
+      <td>20 Hill St, Los Angeles, CA 90001</td>
+      <td>4</td>
+      <td>11.95</td>
+      <td>Los Angeles</td>
+      <td>19</td>
+      <td>Google Phone,USB-C Charging Cable</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>176586</td>
+      <td>AAA Batteries (4-pack)</td>
+      <td>2</td>
+      <td>2.99</td>
+      <td>04/10/19 17:00</td>
+      <td>365 Center St, San Francisco, CA 94016</td>
+      <td>4</td>
+      <td>5.98</td>
+      <td>San Francisco</td>
+      <td>17</td>
+      <td>AAA Batteries (4-pack),Google Phone</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#on a plus besoins de éléments dupliqués donc on les supprimes, </span>
+<span class="n">data1</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Order ID&#39;</span><span class="p">])</span>
+<span class="n">data1</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Order ID</th>
+      <th>Product</th>
+      <th>Quantity Ordered</th>
+      <th>Price Each</th>
+      <th>Order Date</th>
+      <th>Purchase Address</th>
+      <th>Month</th>
+      <th>sales</th>
+      <th>city</th>
+      <th>Hour</th>
+      <th>Grouped</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>3</th>
+      <td>176560</td>
+      <td>Google Phone</td>
+      <td>1</td>
+      <td>600.00</td>
+      <td>04/12/19 14:38</td>
+      <td>669 Spruce St, Los Angeles, CA 90001</td>
+      <td>4</td>
+      <td>600.00</td>
+      <td>Los Angeles</td>
+      <td>14</td>
+      <td>Google Phone,Wired Headphones</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>176574</td>
+      <td>Google Phone</td>
+      <td>1</td>
+      <td>600.00</td>
+      <td>04/03/19 19:42</td>
+      <td>20 Hill St, Los Angeles, CA 90001</td>
+      <td>4</td>
+      <td>600.00</td>
+      <td>Los Angeles</td>
+      <td>19</td>
+      <td>Google Phone,USB-C Charging Cable</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>176586</td>
+      <td>AAA Batteries (4-pack)</td>
+      <td>2</td>
+      <td>2.99</td>
+      <td>04/10/19 17:00</td>
+      <td>365 Center St, San Francisco, CA 94016</td>
+      <td>4</td>
+      <td>5.98</td>
+      <td>San Francisco</td>
+      <td>17</td>
+      <td>AAA Batteries (4-pack),Google Phone</td>
+    </tr>
+    <tr>
+      <th>119</th>
+      <td>176672</td>
+      <td>Lightning Charging Cable</td>
+      <td>1</td>
+      <td>14.95</td>
+      <td>04/12/19 11:07</td>
+      <td>778 Maple St, New York City, NY 10001</td>
+      <td>4</td>
+      <td>14.95</td>
+      <td>New York City</td>
+      <td>11</td>
+      <td>Lightning Charging Cable,USB-C Charging Cable</td>
+    </tr>
+    <tr>
+      <th>129</th>
+      <td>176681</td>
+      <td>Apple Airpods Headphones</td>
+      <td>1</td>
+      <td>150.00</td>
+      <td>04/20/19 10:39</td>
+      <td>331 Cherry St, Seattle, WA 98101</td>
+      <td>4</td>
+      <td>150.00</td>
+      <td>Seattle</td>
+      <td>10</td>
+      <td>Apple Airpods Headphones,ThinkPad Laptop</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data1</span><span class="p">[</span><span class="s1">&#39;Grouped&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()[:</span><span class="mi">5</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>iPhone,Lightning Charging Cable         886
+Google Phone,USB-C Charging Cable       857
+iPhone,Wired Headphones                 361
+Vareebadd Phone,USB-C Charging Cable    312
+Google Phone,Wired Headphones           303
+Name: Grouped, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data1</span><span class="p">[</span><span class="s1">&#39;Grouped&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()[:</span><span class="mi">5</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="n">autopct</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">%1.1f%%</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">shadow</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Distribution des types de programmes&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">16</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x1feb520dd90&gt;
+</pre></div>
+</div>
+<img alt="_images/f802008928f345fc75839646b4a9417466c779c635663877f5cb4a6d54e58935.png" src="_images/f802008928f345fc75839646b4a9417466c779c635663877f5cb4a6d54e58935.png" />
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Bienvenue dans mon portfolio de Data Science !</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="PROJET%203.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">PROJET NETFLIX</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
